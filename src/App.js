@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/header/Header";
 import VideoPlayer from "./components/main/VideoPlayer";
-import PrimaryInfo from "./components/main/PrimaryInfo";
+import VideoInfo from "./components/main/VideoInfo";
 
 export default class App extends React.Component {
 	render() {
@@ -9,7 +9,7 @@ export default class App extends React.Component {
 			<div className="App">
 				<Header />
 				<VideoPlayer />
-				<PrimaryInfo />
+				<VideoInfo />
 			</div>
 		);
 	}
