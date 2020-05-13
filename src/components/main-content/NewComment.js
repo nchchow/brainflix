@@ -13,6 +13,7 @@ export default function NewComment() {
 					cols="30"
 					rows="10"
 					className="new-comment__content"
+					placeholder="Add a comment"
 				></textarea>
 				<button className="new-comment__button">COMMENT</button>
 			</div>

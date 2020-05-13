@@ -227,16 +227,22 @@ html {
 }
 
 .comments .new-comment__content {
-  padding: 14px;
-  border: 2px solid #0095ff;
+  padding: 11px 12px;
+  border: 1px solid #e1e1e1;
   border-radius: 4px;
   width: 100%;
-  height: 6rem;
+  height: 3rem;
   resize: none;
   font-family: "Avenir Next Regular";
   color: #323232;
   font-size: 0.875rem;
   line-height: 1.375rem;
+}
+
+.comments .new-comment__content:focus {
+  padding: 10px 11px;
+  border: 2px solid #0095ff;
+  outline: none;
 }
 
 .comments .new-comment__content--header {
