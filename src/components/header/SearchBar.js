@@ -1,13 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class SearchBar extends Component {
-	render() {
-		return (
-			<input
-				type="text"
-				className="site-nav__search-bar"
-				placeholder="Search"
-			/>
-		);
-	}
+export default function SearchBar() {
+	return (
+		<input type="text" className="site-nav__search-bar" placeholder="Search" />
+	);
 }
