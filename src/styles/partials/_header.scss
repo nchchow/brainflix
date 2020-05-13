@@ -26,22 +26,13 @@
 		}
 
 		&__upload-button {
+			@extend .button;
 			margin: 8px 0 16px;
-			border: none;
-			border-radius: 4px;
-			width: 224px; // temp?
-			height: 48px;
-			background: $primary-CTA;
-			color: #fff;
 		}
 
 		&__user-icon {
+			@extend .user-icon;
 			margin: 8px 0 0 16px;
-			border-radius: 50%;
-			width: 48px;
-			height: 48px;
-			object-fit: cover;
-			object-position: 0;
 		}
 	}
 }

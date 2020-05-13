@@ -5,7 +5,7 @@ import CommentsList from "./CommentsList";
 export default class CommentsSection extends React.Component {
 	render() {
 		return (
-			<section className="comments">
+			<section className="comments container">
 				<CommentsHeader />
 				<CommentsList />
 			</section>

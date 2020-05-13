@@ -5,10 +5,37 @@ $font-regular: "Avenir Next Regular";
 $font-demi: "Avenir Next Demi Bold";
 $font-bold: "Avenir Next Bold";
 
+// sizes
+// $mobile-header-text-size: 1.5rem;
+
 // colors
+$text-color: #323232;
+$text-label-color: #afafaf;
 $text-field-border: #e1e1e1;
 $primary-CTA: #0095ff;
 $primary-hover: #0065ad;
+
+// MIXINS
+@mixin setFontSizeLineHeight($font-size, $line-height) {
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin mobileHeaderText() {
+	@include setFontSizeLineHeight(1.5rem, 2rem);
+}
+
+@mixin mobileSubHeaderText() {
+	@include setFontSizeLineHeight(0.875rem, 1.375rem);
+}
+
+@mixin mobileParagraphText() {
+	@include setFontSizeLineHeight(0.8125rem, 1.125rem);
+}
+
+@mixin mobileLabelText() {
+	@include setFontSizeLineHeight(0.75rem, 1.25rem);
+}
 
 @import "./partials/reset";
 @import "./partials/base";
@@ -16,3 +43,55 @@ $primary-hover: #0065ad;
 @import "./partials/util";
 @import "./partials/header";
 @import "./partials/video-player";
+@import "./partials/video-info";
+
+// COMMENTS SECTION
+.comments {
+	&__header {
+		&--title {
+			margin: 0 0 32px;
+			font-family: $font-demi;
+			@include mobileSubHeaderText();
+		}
+	}
+
+	.new-comment {
+		display: flex;
+		justify-content: space-between;
+
+		&__user-icon {
+			margin: 20px 18px 0 0;
+			@extend .user-icon;
+		}
+
+		&--right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__content {
+			padding: 16px;
+			border: 2px solid $primary-CTA;
+			border-radius: 4px;
+			width: 100%;
+			height: 5rem;
+			resize: none;
+			font-family: $font-regular;
+			color: $text-color;
+			@include mobileParagraphText();
+
+			&--header {
+				margin: 0;
+				font-family: $font-demi;
+				color: $text-label-color;
+				@include mobileLabelText();
+			}
+		}
+
+		&__button {
+			@extend .button;
+			margin: 16px 0 24px;
+		}
+	}
+}
