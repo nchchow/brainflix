@@ -6,6 +6,31 @@ html {
 	color: $text-color;
 }
 
+// BASE COMPONENTS
+.button {
+	border: none;
+	border-radius: 4px;
+	width: 224px; // temp?
+	height: 48px;
+	background: $primary-CTA;
+	color: #fff;
+	@include mobileSubHeaderText();
+}
+
+.user-icon {
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	object-position: 0;
+}
+
+.divider {
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid $text-field-border;
+}
+
 // for debugging
 // * {
 // 	border: 1px dashed gray;

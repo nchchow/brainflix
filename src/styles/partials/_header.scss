@@ -27,6 +27,13 @@
 			background: url("../assets/icons/SVG/Icon-search.svg");
 			background-repeat: no-repeat;
 			background-position: 18px 15px;
+
+			&:focus {
+				border: 2px solid $primary-CTA;
+				outline: none;
+				padding-left: 39px;
+				background-position: 17px 14px;
+			}
 		}
 
 		&__upload-button {

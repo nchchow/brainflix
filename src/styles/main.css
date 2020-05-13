@@ -12,6 +12,33 @@ html {
   color: #323232;
 }
 
+.button, .site-header .site-nav__upload-button, .comments .new-comment__button {
+  border: none;
+  border-radius: 4px;
+  width: 224px;
+  height: 48px;
+  background: #0095ff;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.user-icon, .site-header .site-nav__user-icon, .comments .new-comment__user-icon {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0;
+     object-position: 0;
+}
+
+.divider, .video-info__divider, .comments__list .comment__divider {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
 @font-face {
   font-family: "Avenir Next Light";
   src: url("../assets/fonts/Linotype - AvenirNextLTPro-Light.otf") format("opentype");
@@ -38,33 +65,6 @@ html {
 
 .container {
   margin: 0 16px;
-}
-
-.button, .site-header .site-nav__upload-button, .comments .new-comment__button {
-  border: none;
-  border-radius: 4px;
-  width: 224px;
-  height: 48px;
-  background: #0095ff;
-  color: #fff;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-
-.user-icon, .site-header .site-nav__user-icon, .comments .new-comment__user-icon {
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0;
-     object-position: 0;
-}
-
-.divider, .video-info__divider, .comments__list .comment__divider {
-  margin: 0;
-  border: 0;
-  border-bottom: 1px solid #e1e1e1;
 }
 
 .site-header {
@@ -106,6 +106,13 @@ html {
   background: url("../assets/icons/SVG/Icon-search.svg");
   background-repeat: no-repeat;
   background-position: 18px 15px;
+}
+
+.site-header .site-nav__search-bar:focus {
+  border: 2px solid #0095ff;
+  outline: none;
+  padding-left: 39px;
+  background-position: 17px 14px;
 }
 
 .site-header .site-nav__upload-button {
