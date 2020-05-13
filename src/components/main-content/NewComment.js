@@ -5,7 +5,7 @@ export default function NewComment() {
 	return (
 		<article className="new-comment">
 			<img src={UserIcon} alt="user" className="new-comment__user-icon" />
-			<div className="new-comment--right">
+			<form className="new-comment--form">
 				<h5 className="new-comment__content--header">JOIN THE CONVERSATION</h5>
 				<textarea
 					name=""
@@ -16,7 +16,7 @@ export default function NewComment() {
 					placeholder="Add a comment"
 				></textarea>
 				<button className="new-comment__button">COMMENT</button>
-			</div>
+			</form>
 		</article>
 	);
 }

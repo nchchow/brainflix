@@ -220,7 +220,7 @@ html {
   margin: 20px 18px 0 0;
 }
 
-.comments .new-comment--right {
+.comments .new-comment--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
