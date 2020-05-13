@@ -1,0 +1,54 @@
+// VIDEO INFO
+.video-info {
+	&__title {
+		margin: 32px 0 16px;
+		font-family: $font-bold;
+		@include mobileHeaderText();
+	}
+
+	&--primary {
+	}
+
+	&__owner {
+		margin: 0 8px 32px 0;
+		display: inline-block;
+		font-family: $font-demi;
+		@include mobileSubHeaderText();
+	}
+
+	&__date-posted {
+		margin: 0;
+		display: inline-block;
+		color: $text-label-color;
+		font-family: $font-light;
+		@include mobileParagraphText();
+	}
+
+	&--secondary {
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		margin-right: 8px;
+	}
+
+	&__count {
+		margin: 0;
+		margin-right: 15px;
+		display: inline-block;
+		font-family: $font-light;
+		@include mobileParagraphText();
+	}
+
+	&__divider {
+		@extend .divider;
+		margin: 24px 0;
+	}
+
+	&__description {
+		margin: 0 0 40px;
+		font-family: $font-light;
+		@include mobileParagraphText();
+	}
+}
