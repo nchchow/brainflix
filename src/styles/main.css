@@ -47,6 +47,8 @@ html {
   height: 48px;
   background: #0095ff;
   color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .user-icon, .site-header .site-nav__user-icon, .comments .new-comment__user-icon {
@@ -104,6 +106,19 @@ html {
 
 .site-header .site-nav__upload-button {
   margin: 8px 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-header .site-nav__upload-button--icon {
+  margin-right: 8px;
 }
 
 .site-header .site-nav__user-icon {
@@ -276,5 +291,54 @@ html {
 
 .comments__list .comment__divider {
   margin: 24px 0;
+}
+
+.video-list__header {
+  margin: 40px 0;
+  font-family: "Avenir Next Demi Bold";
+  color: #afafaf;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.video-list .side-video {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+}
+
+.video-list .side-video__thumbnail {
+  margin-right: 16px;
+  border-radius: 4px;
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-list .side-video--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video-list .side-video__title {
+  margin: 0 0 16px 0;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+
+.video-list .side-video__owner {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 /*# sourceMappingURL=main.css.map */

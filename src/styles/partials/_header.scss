@@ -28,6 +28,12 @@
 		&__upload-button {
 			@extend .button;
 			margin: 8px 0 16px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&--icon {
+				margin-right: 8px;
+			}
 		}
 
 		&__user-icon {
