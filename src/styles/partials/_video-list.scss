@@ -1,0 +1,39 @@
+// video list
+.video-list {
+	&__header {
+		margin: 40px 0;
+		font-family: $font-demi;
+		color: $text-label-color;
+		@include mobileLabelText();
+	}
+
+	.side-video {
+		margin-bottom: 24px;
+		display: flex;
+		height: 70px;
+
+		&__thumbnail {
+			margin-right: 16px;
+			border-radius: 4px;
+			width: 120px;
+			object-fit: cover;
+		}
+
+		&--right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__title {
+			margin: 0 0 16px 0;
+			font-family: $font-demi;
+			@include mobileParagraphText();
+		}
+
+		&__owner {
+			margin: 0;
+			@include mobileParagraphText();
+		}
+	}
+}

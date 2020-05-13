@@ -94,6 +94,7 @@ html {
 }
 
 .site-header .site-nav__search-bar {
+  padding-left: 40px;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -102,6 +103,9 @@ html {
   display: block;
   width: 100%;
   height: 48px;
+  background: url("../assets/icons/SVG/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 18px 15px;
 }
 
 .site-header .site-nav__upload-button {
@@ -332,6 +336,7 @@ html {
 
 .video-list .side-video__title {
   margin: 0 0 16px 0;
+  font-family: "Avenir Next Demi Bold";
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
