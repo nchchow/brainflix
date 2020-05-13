@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
+import UserIconJPG from "../../assets/images/Mohan-muruge.jpg";
 
-export default class UserIcon extends React.Component {
+export default class UserIcon extends Component {
 	render() {
-		return <img src="" alt="user" className="site-header__user-icon" />;
+		return <img src={UserIconJPG} alt="user" className="site-nav__user-icon" />;
 	}
 }

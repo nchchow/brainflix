@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default class UploadButton extends React.Component {
+export default class UploadButton extends Component {
 	render() {
-		return <button className="site-header__upload-button">+ UPLOAD</button>;
+		return <button className="site-nav__upload-button">+ UPLOAD</button>;
 	}
 }

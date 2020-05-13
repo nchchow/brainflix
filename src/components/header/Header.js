@@ -1,17 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import Logo from "./Logo";
-import SearchBar from "./SearchBar";
-import UploadButton from "./UploadButton";
-import UserIcon from "./UserIcon";
+import Nav from "./Nav";
 
-export default class Header extends React.Component {
+export default class Header extends Component {
 	render() {
 		return (
-			<header className="site-header">
+			<header className="site-header container">
 				<Logo />
-				<SearchBar />
-				<UploadButton />
-				<UserIcon />
+				<Nav />
 			</header>
 		);
 	}
