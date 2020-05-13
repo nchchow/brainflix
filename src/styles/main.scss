@@ -1,0 +1,18 @@
+// VARIABLES
+// fonts
+$font-light: "Avenir Next Ultra Light";
+$font-regular: "Avenir Next Regular";
+$font-demi: "Avenir Next Demi Bold";
+$font-bold: "Avenir Next Bold";
+
+// colors
+$text-field-border: #e1e1e1;
+$primary-CTA: #0095ff;
+$primary-hover: #0065ad;
+
+@import "./partials/reset";
+@import "./partials/base";
+@import "./partials/fonts";
+@import "./partials/util";
+@import "./partials/header";
+@import "./partials/video-player";
