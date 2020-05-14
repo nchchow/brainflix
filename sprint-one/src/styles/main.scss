@@ -13,6 +13,7 @@ $primary-CTA: #0095ff;
 $primary-hover: #0065ad;
 
 // breakpoints
+$tablet-breakpoint: 768px;
 
 // MIXINS
 @mixin setFontSizeLineHeight($font-size, $line-height) {

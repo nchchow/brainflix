@@ -140,13 +140,17 @@ html {
 
 .video-player-wrapper {
   position: relative;
-  height: 183px;
+  padding-top: 57.18%;
 }
 
 .video-player {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 183px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
