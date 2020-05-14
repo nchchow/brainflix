@@ -43,33 +43,3 @@ $primary-hover: #0065ad;
 @import "./partials/video-info";
 @import "./partials/comments";
 @import "./partials/video-list";
-
-// VIDEO PLAYER CONTROLS
-.controller {
-	display: flex;
-	align-items: center;
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 4px;
-	height: 30px;
-}
-
-.video-player__controls {
-	display: flex;
-
-	&--playPause {
-		@extend .controller;
-
-		&--icon {
-		}
-	}
-
-	&--scrubber {
-		display: inline-block;
-		@extend .controller;
-		width: 120px;
-	}
-
-	&--tools-wrapper {
-		@extend .controller;
-	}
-}

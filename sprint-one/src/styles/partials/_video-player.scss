@@ -1,6 +1,61 @@
 // VIDEO PLAYER
+.video-player-wrapper {
+	position: relative;
+	height: 183px;
+}
+
 .video-player {
+	position: absolute;
 	width: 100%;
 	height: 183px;
 	object-fit: cover;
+}
+
+// VIDEO PLAYER CONTROLS
+.controller {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+	height: 30px;
+}
+
+.video-player__controls {
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	right: 0;
+	display: grid;
+	grid-template-columns: 50px auto 80px;
+
+	&--playPause {
+		@extend .controller;
+		width: 50px;
+		border: none;
+		&:focus {
+			outline: none;
+		}
+
+		&--icon {
+		}
+	}
+
+	&--scrubber {
+		@extend .controller;
+		margin: 0 8px;
+
+		&__loader {
+			margin: 0 20px;
+			width: 100%;
+			height: 4px;
+			background: $text-label-color;
+			border-radius: 4px;
+		}
+	}
+
+	&--tools-wrapper {
+		@extend .controller;
+		width: 80px;
+	}
 }

@@ -5,7 +5,7 @@ import volumeIcon from "../../assets/icons/SVG/Icon-volume.svg";
 
 export default function VideoPlayerControls() {
 	return (
-		<div className="video-player__controls">
+		<div className="video-player__controls container">
 			<button className="video-player__controls--playPause">
 				<img
 					src={playIcon}
@@ -13,7 +13,9 @@ export default function VideoPlayerControls() {
 					className="video-player__controls--playPause--Icon"
 				/>
 			</button>
-			<div className="video-player__controls--scrubber"></div>
+			<div className="video-player__controls--scrubber">
+				<div className="video-player__controls--scrubber__loader"></div>
+			</div>
 			<div className="video-player__controls--tools-wrapper">
 				<img
 					src={fullscreenIcon}
