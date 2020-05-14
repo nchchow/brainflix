@@ -3,8 +3,9 @@ import VideoPlayerControls from "./VideoPlayerControls";
 
 export default function VideoPlayer(props) {
 	return (
-		<video poster={props.image} src="" className="video-player">
+		<>
+			<video poster={props.image} src="" className="video-player"></video>
 			<VideoPlayerControls />
-		</video>
+		</>
 	);
 }

@@ -361,4 +361,27 @@ html {
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
+
+.controller, .video-player__controls--playPause, .video-player__controls--scrubber, .video-player__controls--tools-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  height: 30px;
+}
+
+.video-player__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-player__controls--scrubber {
+  display: inline-block;
+  width: 120px;
+}
 /*# sourceMappingURL=main.css.map */
