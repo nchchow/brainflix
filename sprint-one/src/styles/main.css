@@ -564,6 +564,14 @@ html {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__list .comment--right--top {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .comments__list .comment__name {
   font-family: "Avenir Next Demi Bold";
   font-size: 0.875rem;
@@ -574,6 +582,12 @@ html {
   .comments__list .comment__name {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comments__list .comment__name {
+    margin-right: 16px;
   }
 }
 

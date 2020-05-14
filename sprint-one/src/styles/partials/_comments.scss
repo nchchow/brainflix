@@ -84,12 +84,18 @@
 				&--top {
 					display: flex;
 					justify-content: space-between;
+					@include tablet() {
+						justify-content: flex-start;
+					}
 				}
 			}
 
 			&__name {
 				font-family: $font-demi;
 				@include subHeaderText();
+				@include tablet() {
+					margin-right: 16px;
+				}
 			}
 
 			&__date {
