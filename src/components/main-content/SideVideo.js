@@ -1,15 +1,14 @@
 import React from "react";
-import Thumbnail from "../../assets/images/video-list-1.jpg";
+// import Thumbnail from "../../assets/images/video-list-1.jpg";
 
-export default function SideVideo() {
+export default function SideVideo(props) {
+	let { title, thumbnail, channel } = props;
 	return (
 		<article className="side-video">
-			<img src={Thumbnail} alt="" className="side-video__thumbnail" />
+			<img src={thumbnail} alt="" className="side-video__thumbnail" />
 			<div className="side-video--right">
-				<h2 className="side-video__title">
-					Become a Travel Pro In 9 Easy Lesson
-				</h2>
-				<h4 className="side-video__owner">Scotty Cranmer</h4>
+				<h2 className="side-video__title">{title}</h2>
+				<h4 className="side-video__owner">{channel}</h4>
 			</div>
 		</article>
 	);
