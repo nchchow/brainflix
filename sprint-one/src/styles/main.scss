@@ -14,6 +14,7 @@ $primary-hover: #0065ad;
 
 // breakpoints
 $tablet-breakpoint: 768px;
+$tablet-video-breakpoint: 700px;
 
 // MIXINS
 @mixin setFontSizeLineHeight($font-size, $line-height) {
@@ -39,6 +40,12 @@ $tablet-breakpoint: 768px;
 
 @mixin tablet() {
 	@media screen and (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
+@mixin tabletVideo() {
+	@media screen and (min-width: $tablet-video-breakpoint) {
 		@content;
 	}
 }
