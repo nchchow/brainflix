@@ -669,7 +669,7 @@ html {
   /* number of lines to show */
   margin: 0 0 16px 0;
   padding-right: 1rem;
-  width: 152px;
+  max-width: 200px;
   height: 3rem;
   font-family: "Avenir Next Demi Bold";
   max-height: 2.25rem;
