@@ -31,12 +31,10 @@
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 2; /* number of lines to show */
-			margin: 0 0 16px 0;
+			margin: 0;
 			padding-right: 1rem;
 			max-width: 200px;
-			height: 3rem;
 			font-family: $font-demi;
-			max-height: 1.125rem * 2;
 			@include paragraphText();
 		}
 

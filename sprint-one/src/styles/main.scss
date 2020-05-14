@@ -13,8 +13,9 @@ $primary-CTA: #0095ff;
 $primary-hover: #0065ad;
 
 // breakpoints
-$tablet-breakpoint: 768px;
 $tablet-video-breakpoint: 700px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1440px;
 
 // MIXINS
 @mixin setFontSizeLineHeight($font-size, $line-height) {
@@ -53,14 +54,20 @@ $tablet-video-breakpoint: 700px;
 	@include setFontSizeLineHeight(0.75rem, 1.25rem);
 }
 
+@mixin tabletVideo() {
+	@media screen and (min-width: $tablet-video-breakpoint) {
+		@content;
+	}
+}
+
 @mixin tablet() {
 	@media screen and (min-width: $tablet-breakpoint) {
 		@content;
 	}
 }
 
-@mixin tabletVideo() {
-	@media screen and (min-width: $tablet-video-breakpoint) {
+@mixin desktop() {
+	@media screen and (min-width: $desktop-breakpoint) {
 		@content;
 	}
 }
