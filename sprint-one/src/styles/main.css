@@ -537,6 +537,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -593,12 +594,17 @@ html {
 
 .comments__header .new-comment__button {
   margin-top: 16px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 @media screen and (min-width: 768px) {
   .comments__header .new-comment__button {
     margin: 16px 40px 0 16px;
     width: 160px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
