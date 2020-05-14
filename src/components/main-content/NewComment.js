@@ -11,7 +11,7 @@ export default function NewComment() {
 				<TextareaAutosize
 					name=""
 					id=""
-					maxRows="5"
+					maxRows={5}
 					className="new-comment__content"
 					placeholder="Add a comment"
 				></TextareaAutosize>

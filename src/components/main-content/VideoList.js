@@ -1,13 +1,5 @@
 import React, { Component } from "react";
 import SideVideo from "./SideVideo";
-import videoImage1 from "../../assets/images/video-list-1.jpg";
-import videoImage2 from "../../assets/images/video-list-2.jpg";
-import videoImage3 from "../../assets/images/video-list-3.jpg";
-import videoImage4 from "../../assets/images/video-list-4.jpg";
-import videoImage5 from "../../assets/images/video-list-5.jpg";
-import videoImage6 from "../../assets/images/video-list-6.jpg";
-import videoImage7 from "../../assets/images/video-list-7.jpg";
-import videoImage8 from "../../assets/images/video-list-8.jpg";
 
 export default class VideoList extends Component {
 	state = {
@@ -15,49 +7,49 @@ export default class VideoList extends Component {
 			{
 				id: 1,
 				title: "Become a Travel Pro In One Easy Lesson",
-				thumbnail: videoImage1,
+				thumbnail: "./images/video-list-1.jpg",
 				channel: "Scotty Cranmer",
 			},
 			{
 				id: 2,
 				title: "Les Houches The Hidden Gem Of The Chamonix",
-				thumbnail: videoImage2,
+				thumbnail: "./images/video-list-2.jpg",
 				channel: "Cornelia Blair",
 			},
 			{
 				id: 3,
 				title: "Travel Health Useful Medical Information For",
-				thumbnail: videoImage3,
+				thumbnail: "./images/video-list-3.jpg",
 				channel: "Glen Harper",
 			},
 			{
 				id: 4,
 				title: "Cheap Airline Tickets Great Ways To Save",
-				thumbnail: videoImage4,
+				thumbnail: "./images/video-list-4.jpg",
 				channel: "Emily Harper",
 			},
 			{
 				id: 5,
 				title: "Take A Romantic Break In A Boutique Hotel",
-				thumbnail: videoImage5,
+				thumbnail: "./images/video-list-5.jpg",
 				channel: "Ethan Own",
 			},
 			{
 				id: 6,
 				title: "Choose The Perfect Accommodations",
-				thumbnail: videoImage6,
+				thumbnail: "./images/video-list-6.jpg",
 				channel: "Lydia Perez",
 			},
 			{
 				id: 7,
 				title: "Cruising Destination Ideas",
-				thumbnail: videoImage7,
+				thumbnail: "./images/video-list-7.jpg",
 				channel: "Timothy Austin",
 			},
 			{
 				id: 8,
 				title: "Train Travel On Track For Safety",
-				thumbnail: videoImage8,
+				thumbnail: "./images/video-list-8.jpg",
 				channel: "Scotty Cranmer",
 			},
 		],
