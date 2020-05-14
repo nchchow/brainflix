@@ -37,6 +37,12 @@ $tablet-breakpoint: 768px;
 	@include setFontSizeLineHeight(0.75rem, 1.25rem);
 }
 
+@mixin tablet() {
+	@media screen and (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
 @import "./partials/reset";
 @import "./partials/base";
 @import "./partials/fonts";

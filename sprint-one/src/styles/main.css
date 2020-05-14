@@ -67,6 +67,12 @@ html {
   margin: 0 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 24px;
+  }
+}
+
 .site-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,12 +82,31 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 12px;
-  height: 169px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 80px;
+  }
 }
 
 .site-header__logo {
   margin: 0 auto 12px;
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header__logo {
+    margin: 0;
+  }
 }
 
 .site-header .site-nav {
@@ -91,6 +116,17 @@ html {
       grid-template-columns: auto 64px;
   -ms-grid-rows: 48px auto;
       grid-template-rows: 48px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .site-header .site-nav__search-bar {
@@ -130,12 +166,24 @@ html {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .site-header .site-nav__upload-button {
+    margin: 0 24px;
+  }
+}
+
 .site-header .site-nav__upload-button--icon {
   margin-right: 8px;
 }
 
 .site-header .site-nav__user-icon {
   margin: 8px 0 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header .site-nav__user-icon {
+    margin: 0;
+  }
 }
 
 .video-player-wrapper {
