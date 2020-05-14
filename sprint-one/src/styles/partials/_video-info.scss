@@ -4,6 +4,18 @@
 		margin: 32px 0 16px;
 		font-family: $font-bold;
 		@include mobileHeaderText();
+		@include tablet() {
+			margin: 48px 0 24px;
+			@include tabletDeskHeaderText();
+		}
+	}
+
+	&--wrapper {
+		@include tablet() {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&--primary {
@@ -14,13 +26,17 @@
 		display: inline-block;
 		font-family: $font-demi;
 		@include mobileSubHeaderText();
+		@include tablet() {
+			margin: 0 8px 0 0;
+			@include tabletDeskSubHeaderText();
+		}
 	}
 
 	&__date-posted {
 		margin: 0;
 		display: inline-block;
 		color: $text-label-color;
-		font-family: $font-light;
+		font-family: $font-regular;
 		@include mobileParagraphText();
 	}
 
@@ -48,7 +64,12 @@
 
 	&__description {
 		margin: 0 0 40px;
+		max-width: 510px;
 		font-family: $font-light;
 		@include mobileParagraphText();
+		@include tablet() {
+			margin: 16px 0 64px;
+			@include tabletDeskParagraphText();
+		}
 	}
 }
