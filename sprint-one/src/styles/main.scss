@@ -12,6 +12,8 @@ $text-field-border: #e1e1e1;
 $primary-CTA: #0095ff;
 $primary-hover: #0065ad;
 
+// breakpoints
+
 // MIXINS
 @mixin setFontSizeLineHeight($font-size, $line-height) {
 	font-size: $font-size;

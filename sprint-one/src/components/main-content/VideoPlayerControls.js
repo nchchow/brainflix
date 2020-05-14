@@ -17,16 +17,20 @@ export default function VideoPlayerControls() {
 				<div className="video-player__controls--scrubber__loader"></div>
 			</div>
 			<div className="video-player__controls--tools-wrapper">
-				<img
-					src={fullscreenIcon}
-					alt=""
-					className="video-player__controls--fullscreen"
-				/>
-				<img
-					src={volumeIcon}
-					alt=""
-					className="video-player__controls--volume"
-				/>
+				<button className="video-player__controls--fullscreen">
+					<img
+						src={fullscreenIcon}
+						alt=""
+						className="video-player__controls--fullscreen--icon"
+					/>
+				</button>
+				<button className="video-player__controls--volume">
+					<img
+						src={volumeIcon}
+						alt=""
+						className="video-player__controls--volume--icon"
+					/>
+				</button>
 			</div>
 		</div>
 	);

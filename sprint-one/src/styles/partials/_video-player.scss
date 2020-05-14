@@ -54,6 +54,14 @@
 		}
 	}
 
+	&--fullscreen {
+		display: flex;
+	}
+
+	&--volume {
+		display: flex;
+	}
+
 	&--tools-wrapper {
 		@extend .controller;
 		width: 80px;

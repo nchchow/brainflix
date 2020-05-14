@@ -198,6 +198,18 @@ html {
   border-radius: 4px;
 }
 
+.video-player__controls--fullscreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video-player__controls--volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .video-player__controls--tools-wrapper {
   width: 80px;
 }
