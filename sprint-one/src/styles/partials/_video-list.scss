@@ -26,8 +26,17 @@
 		}
 
 		&__title {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2; /* number of lines to show */
 			margin: 0 0 16px 0;
+			padding-right: 1rem;
+			width: 152px;
+			height: 3rem;
 			font-family: $font-demi;
+			max-height: 1.125rem * 2;
 			@include paragraphText();
 		}
 
