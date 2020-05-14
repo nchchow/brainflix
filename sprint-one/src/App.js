@@ -50,7 +50,7 @@ export default class App extends React.Component {
 			<div className="App">
 				<Header />
 				<VideoPlayer image={this.state.mainVideo.image} />
-				<main class="container">
+				<main className="container">
 					<div className="main--left">
 						<VideoInfo
 							title={this.state.mainVideo.title}
