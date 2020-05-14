@@ -12,6 +12,21 @@ html {
   color: #323232;
 }
 
+@media screen and (min-width: 1440px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main--left {
+    margin-right: 24px;
+    width: 712px;
+  }
+}
+
 .button, .site-header .site-nav__upload-button, .comments__header .new-comment__button {
   border: none;
   border-radius: 4px;
@@ -295,6 +310,11 @@ html {
     position: block;
     margin: 0 auto;
     bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .video-player__controls {
     max-width: 912px;
   }
 }
@@ -340,6 +360,12 @@ html {
 
 .video-player__controls--tools-wrapper {
   width: 80px;
+}
+
+@media screen and (min-width: 1440px) {
+  .video-info {
+    width: 712px;
+  }
 }
 
 .video-info__title {
@@ -430,7 +456,7 @@ html {
   margin: 0;
   margin-right: 24px;
   display: inline-block;
-  font-family: "Avenir Next Ultra Light";
+  font-family: "Avenir Next Light";
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
@@ -449,7 +475,7 @@ html {
 .video-info__description {
   margin: 0 0 40px;
   max-width: 510px;
-  font-family: "Avenir Next Ultra Light";
+  font-family: "Avenir Next Light";
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
@@ -464,6 +490,12 @@ html {
 @media screen and (min-width: 768px) {
   .video-info__description {
     margin: 16px 0 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comments {
+    width: 712px;
   }
 }
 

@@ -1,7 +1,8 @@
 // VIDEO INFO
 .video-info {
-	// align-self: flex-start;
-	// width: 100%;
+	@include desktop() {
+		width: 712px;
+	}
 
 	&__title {
 		margin: 32px 0 16px;

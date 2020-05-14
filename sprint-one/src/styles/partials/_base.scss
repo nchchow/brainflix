@@ -12,12 +12,20 @@ html {
 	color: $text-color;
 }
 
-// main {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	width: 100%;
-// }
+main {
+	@include desktop() {
+		display: flex;
+	}
+}
+
+.main {
+	&--left {
+		@include desktop() {
+			margin-right: 24px;
+			width: 712px;
+		}
+	}
+}
 
 // BASE COMPONENTS
 .button {

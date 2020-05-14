@@ -60,6 +60,8 @@
 		position: block;
 		margin: 0 auto;
 		bottom: 16px;
+	}
+	@include desktop() {
 		max-width: 912px;
 	}
 

@@ -1,5 +1,9 @@
 // COMMENTS SECTION
 .comments {
+	@include desktop() {
+		width: 712px;
+	}
+
 	&__header {
 		&--title {
 			margin: 0 0 32px;

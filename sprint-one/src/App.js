@@ -49,17 +49,19 @@ export default class App extends React.Component {
 		return (
 			<div className="App">
 				<Header />
-				<main>
-					<VideoPlayer image={this.state.mainVideo.image} />
-					<VideoInfo
-						title={this.state.mainVideo.title}
-						description={this.state.mainVideo.description}
-						channel={this.state.mainVideo.channel}
-						views={this.state.mainVideo.views}
-						likes={this.state.mainVideo.likes}
-						timestamp={this.state.mainVideo.timestamp}
-					/>
-					<CommentsSection comments={this.state.mainVideo.comments} />
+				<VideoPlayer image={this.state.mainVideo.image} />
+				<main class="container">
+					<div className="main--left">
+						<VideoInfo
+							title={this.state.mainVideo.title}
+							description={this.state.mainVideo.description}
+							channel={this.state.mainVideo.channel}
+							views={this.state.mainVideo.views}
+							likes={this.state.mainVideo.likes}
+							timestamp={this.state.mainVideo.timestamp}
+						/>
+						<CommentsSection comments={this.state.mainVideo.comments} />
+					</div>
 					<VideoList />
 				</main>
 			</div>
