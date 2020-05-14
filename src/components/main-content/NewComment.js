@@ -1,5 +1,6 @@
 import React from "react";
 import UserIcon from "../../assets/images/Mohan-muruge.jpg";
+import TextareaAutosize from "react-textarea-autosize";
 
 export default function NewComment() {
 	return (
@@ -7,14 +8,13 @@ export default function NewComment() {
 			<img src={UserIcon} alt="user" className="new-comment__user-icon" />
 			<form className="new-comment--form">
 				<h5 className="new-comment__content--header">JOIN THE CONVERSATION</h5>
-				<textarea
+				<TextareaAutosize
 					name=""
 					id=""
-					cols="30"
-					rows="10"
+					maxRows="5"
 					className="new-comment__content"
 					placeholder="Add a comment"
-				></textarea>
+				></TextareaAutosize>
 				<button className="new-comment__button">COMMENT</button>
 			</form>
 		</article>
