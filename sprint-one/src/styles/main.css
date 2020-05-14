@@ -12,7 +12,7 @@ html {
   color: #323232;
 }
 
-.button, .site-header .site-nav__upload-button, .comments .new-comment__button {
+.button, .site-header .site-nav__upload-button, .comments__header .new-comment__button {
   border: none;
   border-radius: 4px;
   width: 224px;
@@ -23,7 +23,14 @@ html {
   line-height: 1.375rem;
 }
 
-.user-icon, .site-header .site-nav__user-icon, .comments .new-comment__user-icon {
+@media screen and (min-width: 768px) {
+  .button, .site-header .site-nav__upload-button, .comments__header .new-comment__button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.user-icon, .site-header .site-nav__user-icon, .comments__header .new-comment__user-icon {
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -145,6 +152,13 @@ html {
   background-position: 15px 15px;
   font-size: 0.875rem;
   line-height: 1.375rem;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header .site-nav__search-bar {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .site-header .site-nav__search-bar:focus {
@@ -308,9 +322,14 @@ html {
 
 @media screen and (min-width: 768px) {
   .video-info__title {
-    margin: 48px 0 24px;
     font-size: 2.25rem;
     line-height: 2.75rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .video-info__title {
+    margin: 48px 0 24px;
   }
 }
 
@@ -338,9 +357,14 @@ html {
 
 @media screen and (min-width: 768px) {
   .video-info__owner {
-    margin: 0 8px 0 0;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .video-info__owner {
+    margin: 0 8px 0 0;
   }
 }
 
@@ -351,6 +375,13 @@ html {
   font-family: "Avenir Next Regular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video-info__date-posted {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .video-info--secondary {
@@ -368,11 +399,18 @@ html {
 
 .video-info__count {
   margin: 0;
-  margin-right: 15px;
+  margin-right: 24px;
   display: inline-block;
   font-family: "Avenir Next Ultra Light";
   font-size: 0.8125rem;
   line-height: 1.125rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video-info__count {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .video-info__divider {
@@ -389,9 +427,14 @@ html {
 
 @media screen and (min-width: 768px) {
   .video-info__description {
-    margin: 16px 0 64px;
     font-size: 0.875rem;
     line-height: 1.375rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .video-info__description {
+    margin: 16px 0 64px;
   }
 }
 
@@ -402,7 +445,14 @@ html {
   line-height: 1.375rem;
 }
 
-.comments .new-comment {
+@media screen and (min-width: 768px) {
+  .comments__header--title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.comments__header .new-comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,11 +461,11 @@ html {
           justify-content: space-between;
 }
 
-.comments .new-comment__user-icon {
+.comments__header .new-comment__user-icon {
   margin: 20px 18px 0 0;
 }
 
-.comments .new-comment--form {
+.comments__header .new-comment--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,7 +478,19 @@ html {
           justify-content: space-between;
 }
 
-.comments .new-comment__content {
+@media screen and (min-width: 768px) {
+  .comments__header .new-comment--form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.comments__header .new-comment__content {
   padding: 11px 12px;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -441,13 +503,26 @@ html {
   line-height: 1.375rem;
 }
 
-.comments .new-comment__content:focus {
+@media screen and (min-width: 768px) {
+  .comments__header .new-comment__content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comments__header .new-comment__content {
+    width: 440px;
+  }
+}
+
+.comments__header .new-comment__content:focus {
   padding: 10px 11px;
   border: 2px solid #0095ff;
   outline: none;
 }
 
-.comments .new-comment__content--header {
+.comments__header .new-comment__content--header {
   margin: 0;
   font-family: "Avenir Next Demi Bold";
   color: #afafaf;
@@ -455,8 +530,15 @@ html {
   line-height: 1.25rem;
 }
 
-.comments .new-comment__button {
+.comments__header .new-comment__button {
   margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .comments__header .new-comment__button {
+    margin: 16px 40px 0 16px;
+    width: 160px;
+  }
 }
 
 .comments__list .comment {
@@ -488,17 +570,39 @@ html {
   line-height: 1.375rem;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__list .comment__name {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .comments__list .comment__date {
   color: #afafaf;
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 
+@media screen and (min-width: 768px) {
+  .comments__list .comment__date {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
 .comments__list .comment__content {
   margin: 0;
   margin-top: 10px;
+  max-width: 624px;
   font-size: 0.875rem;
   line-height: 1.375rem;
+}
+
+@media screen and (min-width: 768px) {
+  .comments__list .comment__content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .comments__list .comment__divider {
@@ -549,9 +653,23 @@ html {
   line-height: 1.125rem;
 }
 
+@media screen and (min-width: 768px) {
+  .video-list .side-video__title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
 .video-list .side-video__owner {
   margin: 0;
   font-size: 0.8125rem;
   line-height: 1.125rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video-list .side-video__owner {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

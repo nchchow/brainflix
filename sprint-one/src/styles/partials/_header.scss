@@ -40,7 +40,7 @@
 			background: url("../assets/icons/SVG/Icon-search.svg");
 			background-repeat: no-repeat;
 			background-position: 15px 15px;
-			@include mobileSubHeaderText();
+			@include subHeaderText();
 
 			&:focus {
 				border: 2px solid $primary-CTA;

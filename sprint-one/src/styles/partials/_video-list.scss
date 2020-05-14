@@ -4,7 +4,7 @@
 		margin: 40px 0;
 		font-family: $font-demi;
 		color: $text-label-color;
-		@include mobileLabelText();
+		@include labelText();
 	}
 
 	.side-video {
@@ -28,12 +28,12 @@
 		&__title {
 			margin: 0 0 16px 0;
 			font-family: $font-demi;
-			@include mobileParagraphText();
+			@include paragraphText();
 		}
 
 		&__owner {
 			margin: 0;
-			@include mobileParagraphText();
+			@include paragraphText();
 		}
 	}
 }

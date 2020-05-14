@@ -3,10 +3,9 @@
 	&__title {
 		margin: 32px 0 16px;
 		font-family: $font-bold;
-		@include mobileHeaderText();
+		@include headerText();
 		@include tablet() {
 			margin: 48px 0 24px;
-			@include tabletDeskHeaderText();
 		}
 	}
 
@@ -25,10 +24,9 @@
 		margin: 0 8px 32px 0;
 		display: inline-block;
 		font-family: $font-demi;
-		@include mobileSubHeaderText();
+		@include subHeaderText();
 		@include tablet() {
 			margin: 0 8px 0 0;
-			@include tabletDeskSubHeaderText();
 		}
 	}
 
@@ -37,7 +35,7 @@
 		display: inline-block;
 		color: $text-label-color;
 		font-family: $font-regular;
-		@include mobileParagraphText();
+		@include paragraphText();
 	}
 
 	&--secondary {
@@ -51,10 +49,10 @@
 
 	&__count {
 		margin: 0;
-		margin-right: 15px;
+		margin-right: 24px;
 		display: inline-block;
 		font-family: $font-light;
-		@include mobileParagraphText();
+		@include paragraphText();
 	}
 
 	&__divider {
@@ -66,10 +64,9 @@
 		margin: 0 0 40px;
 		max-width: 510px;
 		font-family: $font-light;
-		@include mobileParagraphText();
+		@include paragraphText();
 		@include tablet() {
 			margin: 16px 0 64px;
-			@include tabletDeskParagraphText();
 		}
 	}
 }
