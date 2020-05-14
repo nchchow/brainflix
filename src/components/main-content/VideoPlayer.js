@@ -1,10 +1,9 @@
 import React from "react";
 import VideoPlayerControls from "./VideoPlayerControls";
-import Poster from "../../assets/images/video-list-0.jpg";
 
-export default function VideoPlayer() {
+export default function VideoPlayer(props) {
 	return (
-		<video poster={Poster} src="" className="video-player">
+		<video poster={props.image} src="" className="video-player">
 			<VideoPlayerControls />
 		</video>
 	);
