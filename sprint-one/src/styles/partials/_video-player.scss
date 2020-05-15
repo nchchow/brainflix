@@ -69,6 +69,7 @@
 		@extend .controller;
 		width: 50px;
 		border: none;
+
 		&:focus {
 			outline: none;
 		}
