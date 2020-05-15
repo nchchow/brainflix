@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function SearchBar() {
-	return (
-		<input type="text" className="site-nav__search-bar" placeholder="Search" />
-	);
-}
+const SearchBar = () => (
+	<input type="text" className="site-nav__search-bar" placeholder="Search" />
+);
+
+export default SearchBar;

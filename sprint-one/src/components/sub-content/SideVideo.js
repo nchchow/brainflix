@@ -1,5 +1,4 @@
 import React from "react";
-// import Thumbnail from "../../assets/images/video-list-1.jpg";
 
 export default function SideVideo(props) {
 	let { title, thumbnail, channel } = props;

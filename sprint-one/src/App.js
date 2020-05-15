@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "./components/header/Header";
-import VideoPlayer from "./components/main-content/VideoPlayer";
-import VideoInfo from "./components/main-content/VideoInfo";
-import CommentsSection from "./components/main-content/CommentsSection";
-import VideoList from "./components/main-content/VideoList";
+import VideoPlayer from "./components/main-video/VideoPlayer";
+import VideoInfo from "./components/main-video-info/VideoInfo";
+import CommentsSection from "./components/sub-content/CommentsSection";
+import VideoList from "./components/sub-content/VideoList";
 
 export default class App extends React.Component {
 	state = {
