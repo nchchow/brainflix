@@ -44,26 +44,4 @@ export default class DateFormatter {
 		const y = month / 12;
 		return this.formatDateDiff(Math.floor(y), "year");
 	}
-
-	static updateTime(dateElem, comment) {
-		dateElem.textContent = this.dateDifference(
-			new Date().getTime(),
-			comment.timestamp
-		);
-	}
-
-	// returns a handler that toggles comment's date format
-	toggleDate = (comment) => {
-		let toggled = false; // private value
-		return function () {
-			if (toggled) {
-				// display time passed since posted date
-				this.updateTime(this, comment);
-			} else {
-				// display posted date
-				this.textContent = this.getShortDate(comment.timestamp);
-			}
-			toggled = !toggled;
-		};
-	};
 }
