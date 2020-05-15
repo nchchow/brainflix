@@ -2,9 +2,9 @@ import React from "react";
 import NewComment from "./NewComment";
 import CommentsHeaderTitle from "./CommentsHeaderTitle";
 
-const CommentsHeader = (props) => (
+const CommentsHeader = ({ commentsCount }) => (
 	<header className="comments__header">
-		<CommentsHeaderTitle commentsCount={props.commentsCount} />
+		<CommentsHeaderTitle commentsCount={commentsCount} />
 		<NewComment />
 	</header>
 );

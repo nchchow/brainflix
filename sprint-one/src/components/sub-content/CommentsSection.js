@@ -2,10 +2,10 @@ import React from "react";
 import CommentsHeader from "./CommentsHeader";
 import CommentsList from "./CommentsList";
 
-const CommentsSection = (props) => (
+const CommentsSection = ({ comments }) => (
 	<section className="comments container">
-		<CommentsHeader commentsCount={props.comments.length} />
-		<CommentsList comments={props.comments} />
+		<CommentsHeader commentsCount={comments.length} />
+		<CommentsList comments={comments} />
 	</section>
 );
 

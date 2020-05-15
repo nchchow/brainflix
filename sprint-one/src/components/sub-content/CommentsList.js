@@ -1,10 +1,10 @@
 import React from "react";
 import Comment from "./Comment";
 
-const CommentsList = (props) => (
+const CommentsList = ({ comments }) => (
 	<section className="comments__list">
 		<hr className="comment__divider" />
-		{props.comments.map((comment) => (
+		{comments.map((comment) => (
 			<Comment
 				key={comment.id}
 				name={comment.name}

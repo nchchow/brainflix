@@ -1,8 +1,7 @@
 import React from "react";
 import CommentTimestamp from "./CommentTimestamp";
 
-const Comment = (props) => {
-	let { name, timestamp, comment } = props;
+const Comment = ({ name, timestamp, comment }) => {
 	return (
 		<>
 			<article className="comment">

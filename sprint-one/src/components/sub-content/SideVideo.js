@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function SideVideo(props) {
-	let { title, thumbnail, channel } = props;
+export default function SideVideo({ title, thumbnail, channel }) {
 	return (
 		<article className="side-video">
 			<img src={thumbnail} alt="" className="side-video__thumbnail" />

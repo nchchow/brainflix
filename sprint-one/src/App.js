@@ -79,6 +79,3 @@ export default class App extends React.Component {
 		);
 	}
 }
-
-// TODO:
-// destructure props for readability
