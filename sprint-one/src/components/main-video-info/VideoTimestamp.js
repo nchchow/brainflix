@@ -1,9 +1,9 @@
 import React from "react";
-import DateFormatter from "../../scripts/dateFormatter";
+import { dateDifference } from "../../scripts/dateUtil";
 
 const VideoTimestamp = (props) => (
 	<h4 className="video-info__date-posted">
-		{DateFormatter.dateDifference(new Date(), props.timestamp)}
+		{dateDifference(new Date(), props.timestamp)}
 	</h4>
 );
 
