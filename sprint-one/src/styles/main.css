@@ -49,6 +49,10 @@ html {
   }
 }
 
+.button:hover, .site-header .site-nav__upload-button:hover, .comments__header .new-comment__button:hover {
+  background: #0065ad;
+}
+
 .user-icon, .site-header .site-nav__user-icon, .comments__header .new-comment__user-icon {
   border-radius: 50%;
   width: 48px;

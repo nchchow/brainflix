@@ -31,6 +31,10 @@ main {
 	background: $primary-CTA;
 	color: #fff;
 	@include subHeaderText();
+
+	&:hover {
+		background: $primary-hover;
+	}
 }
 
 .user-icon {
