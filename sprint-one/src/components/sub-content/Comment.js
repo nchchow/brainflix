@@ -17,3 +17,5 @@ const Comment = (props) => (
 		<hr className="comment__divider" />
 	</>
 );
+
+export default Comment;
