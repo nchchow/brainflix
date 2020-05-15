@@ -15,16 +15,15 @@ const dateUtil = {
 		return `${m}/${d}/${y}`;
 	},
 
-	// take date difference and unit, then format to string
-
-	// return array containing a rough date difference and the largest appropriate unit as string
-	dateDifference(dt1, dt2) {
+	// returns time elapsed in the largest appropriate unit as string
+	timeElapsed(timestamp) {
+		// take date difference and unit, then format to string
 		const formatDateDiff = (diff, unit) => {
 			if (diff !== 1) unit += "s"; // plural
 			return `${diff} ${unit} ago`;
 		};
 
-		const ms = dt1 - dt2; // in milliseconds
+		const ms = new Date().getTime() - timestamp; // in milliseconds
 		const sec = ms / 1000;
 		if (sec < 10) return "a moment ago";
 		if (sec < 60) return formatDateDiff(Math.floor(sec), "second");
@@ -47,7 +46,7 @@ const dateUtil = {
 };
 
 const getShortDate = dateUtil.getShortDate;
-const dateDifference = dateUtil.dateDifference;
+const timeElapsed = dateUtil.timeElapsed;
 
-export { getShortDate, dateDifference };
+export { getShortDate, timeElapsed };
 export default dateUtil;

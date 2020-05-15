@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { dateDifference } from "../../scripts/dateUtil";
+import { timeElapsed } from "../../scripts/dateUtil";
 
 export default class CommentTimestamp extends Component {
 	state = {
-		timestamp: this.props.timestamp,
-		timeElapsed: dateDifference(new Date().getTime(), this.props.timestamp),
+		// timestamp: this.props.timestamp,
+		timeElapsed: timeElapsed(this.props.timestamp),
 	};
 
 	// TODO: (after implementing adding new comment function)
