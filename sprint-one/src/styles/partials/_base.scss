@@ -1,10 +1,4 @@
 // BASE
-// .App {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// }
-
 body,
 html {
 	margin: 0;
@@ -20,6 +14,7 @@ main {
 
 .main {
 	&--left {
+		margin: 0;
 		@include desktop() {
 			margin-right: 24px;
 			width: 712px;

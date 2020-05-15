@@ -1,5 +1,7 @@
 // COMMENTS SECTION
 .comments {
+	margin: 0;
+
 	@include desktop() {
 		width: 712px;
 	}
@@ -51,9 +53,6 @@
 					outline: none;
 				}
 
-				&--wrapper {
-				}
-
 				&--header {
 					margin: 0;
 					font-family: $font-demi;
@@ -68,9 +67,9 @@
 				align-self: flex-end;
 
 				@include tablet() {
-					margin: 16px 40px 0 16px;
+					margin: 20px 40px 0 16px;
 					width: 160px;
-					align-self: center;
+					align-self: flex-start;
 				}
 			}
 		}
