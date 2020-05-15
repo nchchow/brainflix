@@ -1,21 +1,25 @@
 import React from "react";
+import CommentTimestamp from "./CommentTimestamp";
 
-const Comment = (props) => (
-	<>
-		<article className="comment">
-			<div className="comment--left">
-				<div className="comment__user-icon"></div>
-			</div>
-			<div className="comment--right">
-				<div className="comment--right--top">
-					<span className="comment__name">{props.name}</span>
-					<span className="comment__date">{props.timestamp}</span>
+const Comment = (props) => {
+	let { name, timestamp, comment } = props;
+	return (
+		<>
+			<article className="comment">
+				<div className="comment--left">
+					<div className="comment__user-icon"></div>
 				</div>
-				<p className="comment__content">{props.comment}</p>
-			</div>
-		</article>
-		<hr className="comment__divider" />
-	</>
-);
+				<div className="comment--right">
+					<div className="comment--right--top">
+						<span className="comment__name">{name}</span>
+						<CommentTimestamp timestamp={timestamp} />
+					</div>
+					<p className="comment__content">{comment}</p>
+				</div>
+			</article>
+			<hr className="comment__divider" />
+		</>
+	);
+};
 
 export default Comment;
