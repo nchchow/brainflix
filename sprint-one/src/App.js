@@ -17,7 +17,7 @@ export default class App extends React.Component {
 			views: "1,001,023",
 			likes: "110,985",
 			duration: "0:42",
-			video: "type of <string>",
+			video: "",
 			timestamp: "12/18/2018",
 			comments: [
 				{
@@ -46,21 +46,32 @@ export default class App extends React.Component {
 	};
 
 	render() {
+		let {
+			image,
+			duration,
+			title,
+			description,
+			channel,
+			views,
+			likes,
+			timestamp,
+			comments,
+		} = this.state.mainVideo;
 		return (
 			<div className="App">
 				<Header />
-				<VideoPlayer image={this.state.mainVideo.image} />
+				<VideoPlayer image={image} duration={duration} />
 				<main className="container">
 					<div className="main--left">
 						<VideoInfo
-							title={this.state.mainVideo.title}
-							description={this.state.mainVideo.description}
-							channel={this.state.mainVideo.channel}
-							views={this.state.mainVideo.views}
-							likes={this.state.mainVideo.likes}
-							timestamp={this.state.mainVideo.timestamp}
+							title={title}
+							description={description}
+							channel={channel}
+							views={views}
+							likes={likes}
+							timestamp={timestamp}
 						/>
-						<CommentsSection comments={this.state.mainVideo.comments} />
+						<CommentsSection comments={comments} />
 					</div>
 					<VideoList />
 				</main>

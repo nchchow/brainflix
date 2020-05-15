@@ -3,7 +3,7 @@ import playIcon from "../../assets/icons/SVG/Icon-play.svg";
 import fullscreenIcon from "../../assets/icons/SVG/Icon-fullscreen.svg";
 import volumeIcon from "../../assets/icons/SVG/Icon-volume.svg";
 
-export default function VideoPlayerControls() {
+export default function VideoPlayerControls(props) {
 	return (
 		<div className="video-player__controls container">
 			<button className="video-player__controls--playPause">
@@ -15,6 +15,9 @@ export default function VideoPlayerControls() {
 			</button>
 			<div className="video-player__controls--scrubber">
 				<div className="video-player__controls--scrubber__loader"></div>
+				<div className="video-player__controls--scrubber__duration">
+					0:00 / {props.duration}
+				</div>
 			</div>
 			<div className="video-player__controls--tools-wrapper">
 				<button className="video-player__controls--fullscreen">

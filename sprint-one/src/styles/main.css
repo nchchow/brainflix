@@ -346,6 +346,32 @@ html {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 768px) {
+  .video-player__controls--scrubber__loader {
+    width: 80%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .video-player__controls--scrubber__loader {
+    width: 87%;
+  }
+}
+
+.video-player__controls--scrubber__duration {
+  margin: 0 auto;
+  display: none;
+  color: #afafaf;
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video-player__controls--scrubber__duration {
+    display: inline-block;
+  }
+}
+
 .video-player__controls--fullscreen {
   display: -webkit-box;
   display: -ms-flexbox;
