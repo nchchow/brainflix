@@ -6,7 +6,7 @@ export default function SideVideo({ title, thumbnail, channel }) {
 			<img src={thumbnail} alt="" className="side-video__thumbnail" />
 			<div className="side-video--right">
 				<h2 className="side-video__title">{title}</h2>
-				<h4 className="side-video__owner">{channel}</h4>
+				<h4 className="side-video__channel">{channel}</h4>
 			</div>
 		</article>
 	);
