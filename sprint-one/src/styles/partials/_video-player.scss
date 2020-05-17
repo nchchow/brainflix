@@ -108,16 +108,18 @@
 		}
 	}
 
-	&--fullscreen {
-		display: flex;
-	}
-
-	&--volume {
-		display: flex;
-	}
-
 	&--tools-wrapper {
 		@extend .controller;
 		width: 80px;
+
+		& > button {
+			@extend .controller;
+			border: none;
+			display: flex;
+			background: none;
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 }
