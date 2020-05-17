@@ -386,9 +386,6 @@ html {
 
 .video-player__controls--tools-wrapper > button {
   border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background: none;
 }
 

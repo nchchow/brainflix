@@ -115,7 +115,6 @@
 		& > button {
 			@extend .controller;
 			border: none;
-			display: flex;
 			background: none;
 			&:focus {
 				outline: none;
