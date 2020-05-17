@@ -1,16 +1,10 @@
-import React, { Component } from "react";
-import { timeElapsed } from "../../scripts/dateUtil";
+import React from "react";
+import useTimeElapsed from "../hooks/useTimeElapsed";
 
-export default class CommentTimestamp extends Component {
-	state = {
-		// timestamp: this.props.timestamp,
-		timeElapsed: timeElapsed(this.props.timestamp),
-	};
+const CommentTimestamp = ({ timestamp }) => {
+	const timeElapsed = useTimeElapsed(timestamp);
 
-	// TODO: (after implementing adding new comment function)
-	// implement tick method to update time elapsed every second
+	return <span className="comment__date">{timeElapsed}</span>;
+};
 
-	render() {
-		return <span className="comment__date">{this.state.timeElapsed}</span>;
-	}
-}
+export default CommentTimestamp;

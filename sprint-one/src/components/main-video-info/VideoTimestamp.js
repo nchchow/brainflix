@@ -1,8 +1,10 @@
 import React from "react";
-import { timeElapsed } from "../../scripts/dateUtil";
+import useTimeElapsed from "../hooks/useTimeElapsed";
 
-const VideoTimestamp = ({ timestamp }) => (
-	<h4 className="video-info__date-posted">{timeElapsed(timestamp)}</h4>
-);
+const VideoTimestamp = ({ timestamp }) => {
+	const timeElapsed = useTimeElapsed(timestamp);
+
+	return <h4 className="video-info__date-posted">{timeElapsed}</h4>;
+};
 
 export default VideoTimestamp;

@@ -16,7 +16,7 @@ const dateUtil = {
 	},
 
 	// returns time elapsed in the largest appropriate unit as string
-	timeElapsed(timestamp) {
+	getTimeElapsed(timestamp) {
 		// take date difference and unit, then format to string
 		const formatDateDiff = (diff, unit) => {
 			if (diff !== 1) unit += "s"; // plural
@@ -46,7 +46,7 @@ const dateUtil = {
 };
 
 const getShortDate = dateUtil.getShortDate;
-const timeElapsed = dateUtil.timeElapsed;
+const getTimeElapsed = dateUtil.getTimeElapsed;
 
-export { getShortDate, timeElapsed };
+export { getShortDate, getTimeElapsed };
 export default dateUtil;
