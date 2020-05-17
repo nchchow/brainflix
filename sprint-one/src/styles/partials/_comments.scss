@@ -97,7 +97,7 @@
 				}
 			}
 
-			&__name {
+			&__username {
 				font-family: $font-demi;
 				@include subHeaderText();
 				@include tablet() {

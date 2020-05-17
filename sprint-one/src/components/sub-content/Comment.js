@@ -1,7 +1,7 @@
 import React from "react";
 import CommentTimestamp from "./CommentTimestamp";
 
-const Comment = ({ name, timestamp, comment }) => {
+const Comment = ({ username, timestamp, comment }) => {
 	return (
 		<>
 			<article className="comment">
@@ -10,7 +10,7 @@ const Comment = ({ name, timestamp, comment }) => {
 				</div>
 				<div className="comment--right">
 					<div className="comment--right--top">
-						<span className="comment__name">{name}</span>
+						<span className="comment__username">{username}</span>
 						<CommentTimestamp timestamp={timestamp} />
 					</div>
 					<p className="comment__content">{comment}</p>

@@ -7,7 +7,7 @@ const CommentsList = ({ comments }) => (
 		{comments.map((comment) => (
 			<Comment
 				key={comment.id}
-				name={comment.name}
+				username={comment.username}
 				timestamp={comment.timestamp}
 				comment={comment.comment}
 			/>
