@@ -1,14 +1,14 @@
 import React from "react";
-import UserIcon from "./UserIcon";
+import UserIcon from "../icons/UserIcon";
 import NewCommentForm from "./NewCommentForm";
 
 const NewComment = () => {
-	return (
-		<article className="new-comment">
-			<UserIcon />
-			<NewCommentForm />
-		</article>
-	);
+  return (
+    <article className="new-comment">
+      <UserIcon className="new-comment__user-icon" />
+      <NewCommentForm />
+    </article>
+  );
 };
 
 export default NewComment;
