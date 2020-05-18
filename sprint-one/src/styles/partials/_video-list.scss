@@ -1,46 +1,45 @@
 // video list
 .video-list {
-	&__header {
-		margin: 40px 0;
-		font-family: $font-demi;
-		color: $text-label-color;
-		@include labelText();
-	}
+  &__header {
+    margin: 40px 0;
+    font-family: $font-demi;
+    color: $text-label-color;
+    @include labelText();
+  }
 
-	.side-video {
-		margin-bottom: 24px;
-		display: flex;
-		height: 70px;
+  .side-video {
+    margin-bottom: 24px;
+    display: flex;
+    height: 70px;
 
-		&__thumbnail {
-			margin-right: 16px;
-			border-radius: 4px;
-			width: 120px;
-			object-fit: cover;
-		}
+    &__thumbnail {
+      margin-right: 16px;
+      border-radius: 4px;
+      width: 120px;
+      object-fit: cover;
+    }
 
-		&--right {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
+    &--right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-		&__title {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 2; /* number of lines to show */
-			margin: 0;
-			padding-right: 1rem;
-			max-width: 200px;
-			font-family: $font-demi;
-			@include paragraphText();
-		}
+    &__title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      margin: 0;
+      max-width: 200px;
+      font-family: $font-demi;
+      @include paragraphText();
+    }
 
-		&__channel {
-			margin: 0;
-			@include paragraphText();
-		}
-	}
+    &__channel {
+      margin: 0;
+      @include paragraphText();
+    }
+  }
 }

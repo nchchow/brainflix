@@ -773,7 +773,6 @@ html {
   -webkit-line-clamp: 2;
   /* number of lines to show */
   margin: 0;
-  padding-right: 1rem;
   max-width: 200px;
   font-family: "Avenir Next Demi Bold";
   font-size: 0.8125rem;
