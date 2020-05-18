@@ -1,9 +1,7 @@
 import React from "react";
-import VideoTitle from "./VideoTitle";
-import VideoChannel from "./VideoChannel";
+import Text from "../metadata/Text";
 import Timestamp from "../metadata/Timestamp";
 import Count from "../metadata/Count";
-import VideoDescription from "./VideoDescription";
 import viewsIcon from "../../assets/icons/SVG/Icon-views.svg";
 import likesIcon from "../../assets/icons/SVG/Icon-likes.svg";
 
@@ -12,10 +10,10 @@ const VideoInfo = (props) => {
 
   return (
     <div className="video-info container">
-      <VideoTitle title={title} />
+      <Text className="video-info__title" value={title} />
       <div className="video-info--wrapper">
         <div className="video-info--primary">
-          <VideoChannel channel={channel} />
+          <Text className="video-info__channel" value={channel} />
           <Timestamp
             className="video-info__date-posted"
             timestamp={timestamp}
@@ -27,7 +25,7 @@ const VideoInfo = (props) => {
         </div>
       </div>
       <hr className="video-info__divider" />
-      <VideoDescription description={description} />
+      <Text className="video-info__description" value={description} />
     </div>
   );
 };
