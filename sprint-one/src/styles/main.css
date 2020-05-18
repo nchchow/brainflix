@@ -696,14 +696,14 @@ html {
   }
 }
 
-.comments__list .comment__date {
+.comments__list .comment__timestamp {
   color: #afafaf;
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 
 @media screen and (min-width: 768px) {
-  .comments__list .comment__date {
+  .comments__list .comment__timestamp {
     font-size: 1rem;
     line-height: 1.5rem;
   }

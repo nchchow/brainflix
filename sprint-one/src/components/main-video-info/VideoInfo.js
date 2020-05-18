@@ -1,7 +1,7 @@
 import React from "react";
 import VideoTitle from "./VideoTitle";
 import VideoChannel from "./VideoChannel";
-import VideoTimestamp from "./VideoTimestamp";
+import Timestamp from "../metadata/Timestamp";
 import Count from "../metadata/Count";
 import VideoDescription from "./VideoDescription";
 import viewsIcon from "../../assets/icons/SVG/Icon-views.svg";
@@ -16,7 +16,10 @@ const VideoInfo = (props) => {
       <div className="video-info--wrapper">
         <div className="video-info--primary">
           <VideoChannel channel={channel} />
-          <VideoTimestamp timestamp={timestamp} />
+          <Timestamp
+            className="video-info__date-posted"
+            timestamp={timestamp}
+          />
         </div>
         <div className="video-info--secondary">
           <Count icon={viewsIcon} value={views} />
