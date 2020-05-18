@@ -1,6 +1,6 @@
 import React from "react";
 import TextareaAutosize from "react-textarea-autosize";
-import NewCommentButton from "./NewCommentButton";
+import Button from "../buttons/Button";
 
 const NewCommentForm = () => {
   const formHandler = (event) => {
@@ -18,7 +18,7 @@ const NewCommentForm = () => {
           placeholder="Add a comment"
         ></TextareaAutosize>
       </div>
-      <NewCommentButton />
+      <Button className="new-comment__button" value="COMMENT" />
     </form>
   );
 };
