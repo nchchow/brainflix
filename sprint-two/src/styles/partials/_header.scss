@@ -11,6 +11,12 @@
     height: 80px;
   }
 
+  .navlink {
+    display: flex;
+    align-content: center;
+    text-decoration: none;
+  }
+
   &__logo {
     margin: 0 auto 12px;
     display: block;
@@ -30,6 +36,10 @@
     @include tablet() {
       display: flex;
       align-items: center;
+      width: 431px;
+    }
+    @include desktop() {
+      width: 450px;
     }
 
     &__search-bar {
@@ -62,6 +72,7 @@
       align-items: center;
       @include tablet() {
         margin: 0 24px;
+        width: 120px;
       }
 
       &--icon {

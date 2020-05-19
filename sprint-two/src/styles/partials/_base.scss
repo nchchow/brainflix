@@ -1,54 +1,55 @@
 // BASE
 body,
 html {
-	margin: 0;
-	font-family: $font-regular;
-	color: $text-color;
+  margin: 0;
+  font-family: $font-regular;
+  color: $text-color;
 }
 
 main {
-	@include desktop() {
-		display: flex;
-	}
+  @include desktop() {
+    display: flex;
+  }
 }
 
 .main {
-	&--left {
-		margin: 0;
-		@include desktop() {
-			margin-right: 24px;
-			width: 712px;
-		}
-	}
+  &--left {
+    margin: 0;
+    @include desktop() {
+      margin-right: 24px;
+      width: 712px;
+    }
+  }
 }
 
 // BASE COMPONENTS
 .button {
-	border: none;
-	border-radius: 4px;
-	width: 224px;
-	height: 48px;
-	background: $primary-CTA;
-	color: #fff;
-	@include subHeaderText();
+  border: none;
+  border-radius: 4px;
+  width: 224px;
+  height: 48px;
+  background: $primary-CTA;
+  color: #fff;
+  @include subHeaderText();
+  font-family: $font-demi;
 
-	&:hover {
-		background: $primary-hover;
-	}
+  &:hover {
+    background: $primary-hover;
+  }
 }
 
 .user-icon {
-	border-radius: 50%;
-	width: 48px;
-	height: 48px;
-	object-fit: cover;
-	object-position: 0;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: 0;
 }
 
 .divider {
-	margin: 0;
-	border: 0;
-	border-bottom: 1px solid $text-field-border;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid $text-field-border;
 }
 
 // for debugging
