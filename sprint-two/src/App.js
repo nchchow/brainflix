@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/pages/Home";
+import Upload from "./components/pages/Upload";
 
 export default class App extends React.Component {
   state = {
@@ -51,7 +52,7 @@ export default class App extends React.Component {
             render={() => <Home mainVideo={this.state.mainVideo} />}
             exact
           />
-          <Route path="/upload" component={} exact />
+          <Route path="/upload" component={Upload} exact />
         </div>
       </Router>
     );
