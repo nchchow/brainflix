@@ -4,12 +4,14 @@ import Logo from "../icons/Logo";
 import Nav from "./Nav";
 
 const Header = () => (
-  <header className="site-header container">
-    <NavLink to="/" className="navlink">
-      <Logo />
-    </NavLink>
-    <Nav />
-  </header>
+  <div className="box-shadow">
+    <header className="site-header container">
+      <NavLink to="/" className="navlink">
+        <Logo />
+      </NavLink>
+      <Nav />
+    </header>
+  </div>
 );
 
 export default Header;

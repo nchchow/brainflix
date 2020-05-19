@@ -9,3 +9,83 @@
 @import "./partials/video-info";
 @import "./partials/comments";
 @import "./partials/video-list";
+
+// UPLOAD
+.upload {
+  &__header {
+    margin: 24px 0 32px;
+    font-family: $font-bold;
+    @include headerText();
+  }
+
+  &--form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    border-radius: 4px;
+    width: 288px;
+    height: 135px;
+    object-fit: cover;
+
+    &--label {
+      margin: 0;
+      color: $text-label-color;
+      font-family: $font-demi;
+      @include labelText();
+    }
+  }
+
+  &__title {
+    &--label {
+      margin: 32px 0 24px;
+      color: $text-label-color;
+      font-family: $font-demi;
+      @include labelText();
+    }
+
+    &--input {
+      @extend .text-input;
+      padding-left: 16px;
+      font-family: $font-regular;
+      @include subHeaderText();
+
+      &:focus {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &__description {
+    &--label {
+      color: $text-label-color;
+      font-family: $font-demi;
+      @include labelText();
+    }
+    &--textarea {
+      @extend .text-area;
+      height: 143px;
+    }
+  }
+
+  &__button {
+    @extend .button;
+    margin: 32px 0 24px;
+    width: 100%;
+  }
+
+  &--cancel {
+    display: inline-block;
+    margin-bottom: 24px;
+    border: none;
+    background: #fff;
+    color: $primary-CTA;
+    width: 100%;
+    height: 16px;
+    @include subHeaderText();
+    font-family: $font-demi;
+    text-decoration: none;
+    text-align: center;
+  }
+}

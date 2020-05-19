@@ -34,23 +34,11 @@
       }
 
       &__content {
-        padding: 11px 12px;
-        border: 1px solid $text-field-border;
-        border-radius: 4px;
-        width: 100%;
+        @extend .text-area;
         height: 3rem;
-        resize: none;
-        font-family: $font-regular;
-        color: $text-color;
-        @include subHeaderText();
+
         @include tablet() {
           width: 440px;
-        }
-
-        &:focus {
-          padding: 10px 11px;
-          border: 2px solid $primary-CTA;
-          outline: none;
         }
 
         &--header {

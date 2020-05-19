@@ -1,14 +1,18 @@
 // UTIL
 .container {
-	margin: 0 16px;
+  margin: 0 16px;
 
-	@include tablet() {
-		margin: 0 auto;
-		width: 720px;
-	}
+  @include tablet() {
+    margin: 0 auto;
+    width: 720px;
+  }
 
-	@include desktop() {
-		margin: 0 auto;
-		width: 1080px;
-	}
+  @include desktop() {
+    margin: 0 auto;
+    width: 1080px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 1px 2px $text-field-border;
 }
