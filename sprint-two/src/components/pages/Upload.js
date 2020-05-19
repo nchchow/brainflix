@@ -10,6 +10,7 @@ const Upload = () => {
       <Header />
       <div className="container">
         <h1 className="upload__header">Upload Video</h1>
+        <hr className="upload--divider" />
         <h4 className="upload__thumbnail--label">VIDEO THUMBNAIL</h4>
         <img src={preview} alt="" className="upload__thumbnail" />
         <form action="" className="upload--form">
@@ -32,11 +33,14 @@ const Upload = () => {
               placeholder="Add a description to your video"
             ></textarea>
           </label>
-          <Button className="upload__button" value="PUBLISH" />
+          <hr className="upload--divider" />
+          <div className="buttons-wrapper">
+            <Button className="upload__button" value="PUBLISH" />
+            <Link to="/" className="upload--cancel">
+              CANCEL
+            </Link>
+          </div>
         </form>
-        <Link to="/" className="upload--cancel">
-          CANCEL
-        </Link>
       </div>
     </div>
   );

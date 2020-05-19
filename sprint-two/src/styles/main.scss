@@ -16,11 +16,9 @@
     margin: 24px 0 32px;
     font-family: $font-bold;
     @include headerText();
-  }
-
-  &--form {
-    display: flex;
-    flex-direction: column;
+    @include tablet() {
+      margin: 48px 0 32px;
+    }
   }
 
   &__thumbnail {
@@ -28,13 +26,25 @@
     width: 288px;
     height: 135px;
     object-fit: cover;
+    @include tablet() {
+      width: 344px;
+      height: 183px;
+    }
 
     &--label {
       margin: 0;
       color: $text-label-color;
       font-family: $font-demi;
       @include labelText();
+      @include tablet() {
+        margin: 40px 0 0;
+      }
     }
+  }
+
+  &--form {
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -43,6 +53,9 @@
       color: $text-label-color;
       font-family: $font-demi;
       @include labelText();
+      @include tablet() {
+        margin-top: 40px;
+      }
     }
 
     &--input {
@@ -66,13 +79,31 @@
     &--textarea {
       @extend .text-area;
       height: 143px;
+      @include tablet() {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include tablet() {
+      flex-direction: row-reverse;
     }
   }
 
   &__button {
     @extend .button;
     margin: 32px 0 24px;
-    width: 100%;
+    width: 288px;
+    @include tablet() {
+      margin-left: 48px;
+      width: 160px;
+      align-self: flex-end;
+    }
   }
 
   &--cancel {
@@ -87,5 +118,18 @@
     font-family: $font-demi;
     text-decoration: none;
     text-align: center;
+    @include tablet() {
+      width: auto;
+      margin: 0;
+      display: inline;
+    }
+  }
+
+  &--divider {
+    @extend .divider;
+    display: none;
+    @include tablet() {
+      display: block;
+    }
   }
 }
