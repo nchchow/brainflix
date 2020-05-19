@@ -1,0 +1,14 @@
+// UTIL
+.container {
+	margin: 0 16px;
+
+	@include tablet() {
+		margin: 0 auto;
+		width: 720px;
+	}
+
+	@include desktop() {
+		margin: 0 auto;
+		width: 1080px;
+	}
+}
