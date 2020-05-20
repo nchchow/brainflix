@@ -276,11 +276,19 @@ html {
   .site-header .site-nav__upload-button {
     margin: 0 24px;
     width: 103px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 .site-header .site-nav__upload-button--icon {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header .site-nav__upload-button--icon {
+    margin: 0;
+  }
 }
 
 .site-header .site-nav__user-icon {

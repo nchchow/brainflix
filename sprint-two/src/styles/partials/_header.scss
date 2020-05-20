@@ -67,10 +67,14 @@
       @include tablet() {
         margin: 0 24px;
         width: 103px;
+        justify-content: space-around;
       }
 
       &--icon {
         margin-right: 8px;
+        @include tablet() {
+          margin: 0;
+        }
       }
     }
 
