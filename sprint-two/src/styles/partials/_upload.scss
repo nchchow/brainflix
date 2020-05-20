@@ -83,7 +83,7 @@
       display: block;
       color: $text-label-color;
       font-family: $font-demi;
-      @include labelText(); // just sets line height and text size
+      @include labelText();
     }
     &--textarea {
       @extend .text-area;
