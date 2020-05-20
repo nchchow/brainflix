@@ -852,6 +852,10 @@ html {
   }
 }
 
+.upload .thumbnail-wrapper {
+  display: inline-block;
+}
+
 .upload__thumbnail {
   border-radius: 4px;
   width: 288px;
@@ -891,6 +895,27 @@ html {
           flex-direction: column;
 }
 
+.upload .input-wrapper {
+  margin: 40px 0 40px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .upload .input-wrapper {
+    height: 203px;
+  }
+}
+
 .upload__title--label {
   margin: 32px 0 24px;
   color: #afafaf;
@@ -902,6 +927,12 @@ html {
 @media screen and (min-width: 768px) {
   .upload__title--label {
     margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .upload__title--label {
+    margin: 0;
   }
 }
 
@@ -937,6 +968,13 @@ html {
 @media screen and (min-width: 768px) {
   .upload__description--textarea {
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .upload__description--textarea {
+    margin: 0;
+    height: 94px;
   }
 }
 
@@ -1014,6 +1052,17 @@ html {
 @media screen and (min-width: 768px) {
   .upload--divider {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .upload-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=main.css.map */
