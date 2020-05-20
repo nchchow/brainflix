@@ -854,6 +854,7 @@ html {
 
 .upload .thumbnail-wrapper {
   display: inline-block;
+  line-height: 0;
 }
 
 .upload__thumbnail {
@@ -895,28 +896,26 @@ html {
           flex-direction: column;
 }
 
-.upload .input-wrapper {
-  margin: 40px 0 40px 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
 @media screen and (min-width: 1440px) {
   .upload .input-wrapper {
+    margin: 40px 0 40px 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
     height: 203px;
   }
 }
 
 .upload__title--label {
+  display: block;
   margin: 32px 0 24px;
   color: #afafaf;
   font-family: "Avenir Next Demi Bold";
@@ -955,6 +954,7 @@ html {
 }
 
 .upload__description--label {
+  display: block;
   color: #afafaf;
   font-family: "Avenir Next Demi Bold";
   font-size: 0.75rem;
