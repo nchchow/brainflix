@@ -83,6 +83,14 @@ main {
   border-bottom: 1px solid $text-field-border;
 }
 
+.link {
+  text-decoration: none;
+
+  &:visited {
+    color: initial;
+  }
+}
+
 // for debugging
 // * {
 //   border: 1px dashed gray;

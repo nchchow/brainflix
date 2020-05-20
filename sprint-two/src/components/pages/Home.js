@@ -27,22 +27,31 @@ export default class Home extends Component {
   };
 
   componentDidMount = () => {
-    // initial api call
-    let id = "";
-    axios
-      .get(`${URL}/videos?api_key=${API_KEY}`)
-      .then((res) => {
-        id = res.data.shift().id; // get first id and remove from side videos
-        this.setState({ sideVideos: res.data });
-      })
-      .then(() => this.searchVideo(id)); // search for video content based on first id
+    this.populateVideos();
   };
 
-  searchVideo = (id) => {
-    axios
-      .get(`${URL}/videos/${id}?api_key=${API_KEY}`)
-      .then((res) => this.setState({ mainVideo: res.data }));
+  componentDidUpdate = (prevState) => {
+    if (prevState.match.url !== this.props.match.url) this.populateVideos();
   };
+
+  populateVideos = () => {
+    // get all videos
+    axios.get(`${URL}/videos?api_key=${API_KEY}`).then((res) => {
+      let { id } = this.props.match.params;
+      // find first id if there is no id already set
+      if (!id) id = res.data[0].id;
+
+      // get main video with id
+      axios.get(`${URL}/videos/${id}?api_key=${API_KEY}`).then((res) => {
+        this.setState({ mainVideo: res.data });
+      });
+      // remove main video from side videos and set side videos
+      this.setState({
+        sideVideos: res.data.filter((video) => video.id !== id),
+      });
+    });
+  };
+
   render() {
     let {
       image,

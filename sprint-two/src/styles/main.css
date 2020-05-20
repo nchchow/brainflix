@@ -109,6 +109,14 @@ html {
   border-bottom: 1px solid #e1e1e1;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.link:visited {
+  color: initial;
+}
+
 @font-face {
   font-family: "Avenir Next Light";
   src: url("../assets/fonts/Linotype - AvenirNextLTPro-Light.otf") format("opentype");
