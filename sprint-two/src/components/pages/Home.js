@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import VideoPlayer from "../main-video/VideoPlayer";
-import VideoInfo from "../main-video-info/VideoInfo";
+import VideoInfo from "../metadata/VideoInfo";
 import CommentsSection from "../sub-content/CommentsSection";
 import VideoList from "../sub-content/VideoList";
 
