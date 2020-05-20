@@ -2,7 +2,7 @@ import React from "react";
 
 const UploadDescription = () => (
   <>
-    <label for="upload__description" className="upload__description--label">
+    <label htmlFor="upload__description" className="upload__description--label">
       ADD A VIDEO DESCRIPTION
     </label>
     <textarea
