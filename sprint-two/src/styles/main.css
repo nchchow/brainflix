@@ -206,13 +206,6 @@ html {
 @media screen and (min-width: 768px) {
   .site-header__logo {
     margin: 0;
-    margin-right: 149px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .site-header__logo {
-    margin-right: 509px;
   }
 }
 
@@ -227,6 +220,7 @@ html {
 
 @media screen and (min-width: 768px) {
   .site-header .site-nav {
+    margin-left: 149px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -239,6 +233,7 @@ html {
 
 @media screen and (min-width: 1440px) {
   .site-header .site-nav {
+    margin-left: 509px;
     width: 450px;
   }
 }

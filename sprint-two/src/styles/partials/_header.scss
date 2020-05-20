@@ -22,10 +22,6 @@
     display: block;
     @include tablet() {
       margin: 0;
-      margin-right: 149px;
-    }
-    @include desktop() {
-      margin-right: 509px;
     }
   }
 
@@ -34,11 +30,13 @@
     grid-template-columns: auto 64px;
     grid-template-rows: 48px auto;
     @include tablet() {
+      margin-left: 149px;
       display: flex;
       align-items: center;
       width: 451px;
     }
     @include desktop() {
+      margin-left: 509px;
       width: 450px;
     }
 
