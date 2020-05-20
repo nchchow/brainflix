@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "../header/Header";
 import VideoPlayer from "../main-video/VideoPlayer";
 import VideoInfo from "../main-video-info/VideoInfo";
 import CommentsSection from "../sub-content/CommentsSection";
@@ -20,7 +19,6 @@ export default class Home extends Component {
     } = this.props.mainVideo;
     return (
       <>
-        <Header />
         <VideoPlayer image={image} duration={duration} />
         <main className="container">
           <div className="main--left">
