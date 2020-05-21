@@ -9,15 +9,9 @@ export default class Home extends Component {
   state = {
     mainVideo: {
       id: "",
-      title: "",
-      description: "",
-      channel: "",
       image: "",
-      views: "",
-      likes: "",
       duration: "",
       video: "",
-      timestamp: new Date().getTime(),
       comments: [],
     },
     sideVideos: [],
@@ -61,8 +55,7 @@ export default class Home extends Component {
           <div className="main--left">
             <VideoInfo mainVideo={mainVideo} />
             <CommentsSection
-              comments={mainVideo.comments}
-              id={mainVideo.id}
+              mainVideo={mainVideo}
               handler={this.populateVideos}
             />
           </div>

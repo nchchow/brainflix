@@ -2,10 +2,10 @@ import React from "react";
 import NewComment from "./NewComment";
 import CommentsHeaderTitle from "./CommentsHeaderTitle";
 
-const CommentsHeader = ({ commentsCount, id, handler }) => (
+const CommentsHeader = ({ mainVideo, handler }) => (
   <header className="comments__header">
-    <CommentsHeaderTitle commentsCount={commentsCount} />
-    <NewComment id={id} handler={handler} />
+    <CommentsHeaderTitle commentsCount={mainVideo.comments.length} />
+    <NewComment id={mainVideo.id} handler={handler} />
   </header>
 );
 

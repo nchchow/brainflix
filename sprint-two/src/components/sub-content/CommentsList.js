@@ -7,12 +7,7 @@ const CommentsList = ({ comments }) => (
     {comments
       .sort((a, b) => b.timestamp - a.timestamp)
       .map((comment) => (
-        <Comment
-          key={comment.id}
-          username={comment.name}
-          timestamp={comment.timestamp}
-          comment={comment.comment}
-        />
+        <Comment key={comment.id} commentProp={comment} />
       ))}
   </section>
 );
