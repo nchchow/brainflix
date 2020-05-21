@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import Timestamp from "../metadata/Timestamp";
 
-const Comment = ({ commentProp, videoId, handler }) => {
+const Comment = ({ commentProp, videoId, populateHandler }) => {
   const { id, name, timestamp, comment } = commentProp;
 
   const deleteComment = () => {
@@ -10,7 +10,7 @@ const Comment = ({ commentProp, videoId, handler }) => {
     const URL = "https://project-2-api.herokuapp.com";
     axios
       .delete(`${URL}/videos/${videoId}/comments/${id}?api_key=${API_KEY}`)
-      .then(() => handler());
+      .then(() => populateHandler());
   };
 
   return (

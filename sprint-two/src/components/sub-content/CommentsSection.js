@@ -2,14 +2,14 @@ import React from "react";
 import CommentsHeader from "./CommentsHeader";
 import CommentsList from "./CommentsList";
 
-const CommentsSection = ({ mainVideo, handler }) => {
+const CommentsSection = ({ mainVideo, populateHandler }) => {
   return (
     <section className="comments container">
-      <CommentsHeader mainVideo={mainVideo} handler={handler} />
+      <CommentsHeader mainVideo={mainVideo} populateHandler={populateHandler} />
       <CommentsList
         comments={mainVideo.comments}
         videoId={mainVideo.id}
-        handler={handler}
+        populateHandler={populateHandler}
       />
     </section>
   );

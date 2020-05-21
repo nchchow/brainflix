@@ -56,7 +56,7 @@ export default class Home extends Component {
             <VideoInfo mainVideo={mainVideo} />
             <CommentsSection
               mainVideo={mainVideo}
-              handler={this.populateVideos}
+              populateHandler={this.populateVideos}
             />
           </div>
           <VideoList sideVideos={this.state.sideVideos} />

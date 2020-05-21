@@ -1,7 +1,7 @@
 import React from "react";
 import Comment from "./Comment";
 
-const CommentsList = ({ comments, videoId, handler }) => (
+const CommentsList = ({ comments, videoId, populateHandler }) => (
   <section className="comments__list">
     <hr className="comment__divider" />
     {comments
@@ -11,7 +11,7 @@ const CommentsList = ({ comments, videoId, handler }) => (
           key={comment.id}
           commentProp={comment}
           videoId={videoId}
-          handler={handler}
+          populateHandler={populateHandler}
         />
       ))}
   </section>
