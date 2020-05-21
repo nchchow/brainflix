@@ -18,6 +18,7 @@ main {
     @include desktop() {
       margin-right: 24px;
       width: 712px;
+      border-right: solid 1px $text-field-border;
     }
   }
 }

@@ -28,6 +28,7 @@ html {
   .main--left {
     margin-right: 24px;
     width: 712px;
+    border-right: solid 1px #e1e1e1;
   }
 }
 
