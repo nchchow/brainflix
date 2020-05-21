@@ -60,7 +60,11 @@ export default class Home extends Component {
         <main className="container">
           <div className="main--left">
             <VideoInfo mainVideo={mainVideo} />
-            <CommentsSection comments={mainVideo.comments} />
+            <CommentsSection
+              comments={mainVideo.comments}
+              id={mainVideo.id}
+              handler={this.populateVideos}
+            />
           </div>
           <VideoList sideVideos={this.state.sideVideos} />
         </main>
