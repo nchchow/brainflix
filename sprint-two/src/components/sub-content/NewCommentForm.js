@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import axios from "axios";
-import { uuid } from "uuidv4";
 import Button from "../buttons/Button";
 
 export default class NewCommentForm extends Component {
