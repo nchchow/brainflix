@@ -6,7 +6,11 @@ const CommentsSection = ({ mainVideo, handler }) => {
   return (
     <section className="comments container">
       <CommentsHeader mainVideo={mainVideo} handler={handler} />
-      <CommentsList comments={mainVideo.comments} />
+      <CommentsList
+        comments={mainVideo.comments}
+        videoId={mainVideo.id}
+        handler={handler}
+      />
     </section>
   );
 };
