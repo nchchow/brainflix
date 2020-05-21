@@ -5,8 +5,8 @@ import Count from "../metadata/Count";
 import viewsIcon from "../../assets/icons/SVG/Icon-views.svg";
 import likesIcon from "../../assets/icons/SVG/Icon-likes.svg";
 
-const VideoInfo = (props) => {
-  let { title, description, channel, views, likes, timestamp } = props;
+const VideoInfo = ({ mainVideo }) => {
+  const { title, description, channel, views, likes, timestamp } = mainVideo;
 
   return (
     <div className="video-info container">

@@ -52,31 +52,15 @@ export default class Home extends Component {
   };
 
   render() {
-    let {
-      image,
-      duration,
-      title,
-      description,
-      channel,
-      views,
-      likes,
-      timestamp,
-      comments,
-    } = this.state.mainVideo;
+    const { mainVideo } = this.state;
+    const { image, duration } = mainVideo;
     return (
       <>
         <VideoPlayer image={image} duration={duration} />
         <main className="container">
           <div className="main--left">
-            <VideoInfo
-              title={title}
-              description={description}
-              channel={channel}
-              views={views}
-              likes={likes}
-              timestamp={timestamp}
-            />
-            <CommentsSection comments={comments} />
+            <VideoInfo mainVideo={mainVideo} />
+            <CommentsSection comments={mainVideo.comments} />
           </div>
           <VideoList sideVideos={this.state.sideVideos} />
         </main>
