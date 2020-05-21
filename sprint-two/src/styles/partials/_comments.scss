@@ -7,6 +7,7 @@
   }
 
   &__header {
+    padding-bottom: 24px;
     &--title {
       margin: 0 0 32px;
       font-family: $font-demi;
@@ -65,7 +66,44 @@
 
   &__list {
     .comment {
-      display: flex;
+      padding: 24px 0;
+      position: relative;
+
+      &:hover {
+        .comment__shift-wrapper {
+          transform: translateX(-60px);
+        }
+
+        .comment__delete-button {
+          animation: expand forwards 0.3s;
+        }
+      }
+
+      &__shift-wrapper {
+        display: flex;
+        transition: transform cubic-bezier(0.5, 0.5, 0, 1) 0.3s;
+      }
+
+      &__delete-button {
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0px;
+        opacity: 0;
+        overflow: hidden;
+        background: $danger-CTA;
+        color: #fff;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          background: $danger-hover;
+        }
+      }
 
       &__user-icon {
         margin: 0 16px 0 0;
@@ -107,7 +145,7 @@
 
       &__divider {
         @extend .divider;
-        margin: 24px 0;
+        // margin: 24px 0;
       }
     }
   }
