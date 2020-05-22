@@ -14,6 +14,7 @@ export default class App extends React.Component {
             <Route path="/" component={Home} exact />
             <Route path="/videos/:id" component={Home} />
             <Route path="/upload" component={Upload} exact />
+            <Route path="*" component={Home} />
           </Switch>
         </div>
       </Router>
