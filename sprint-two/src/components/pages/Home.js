@@ -42,9 +42,14 @@ export default class Home extends Component {
   };
 
   getMainVideo = (id) => {
-    axios.get(`${URL}/videos/${id}?api_key=${API_KEY}`).then((res) => {
-      this.setState({ mainVideo: res.data });
-    });
+    axios
+      .get(`${URL}/videos/${id}?api_key=${API_KEY}`)
+      .then((res) => {
+        this.setState({ mainVideo: res.data });
+      })
+      .catch(() => {
+        window.location.href = "/"; // redirects to home if no video is found
+      });
   };
 
   render() {
