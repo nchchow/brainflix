@@ -22,7 +22,7 @@ export default class Home extends Component {
   };
 
   componentDidUpdate = (prevState) => {
-    if (prevState.match.url !== this.props.match.url) this.populateVideos();
+    prevState.match.url !== this.props.match.url && this.populateVideos();
   };
 
   populateVideos = () => {
