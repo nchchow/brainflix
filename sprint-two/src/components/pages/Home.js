@@ -11,7 +11,6 @@ const URL = "https://project-2-api.herokuapp.com";
 export default class Home extends Component {
   state = {
     mainVideo: {
-      id: "",
       image: "",
       duration: "",
       video: "",
