@@ -27,11 +27,10 @@ export default class Home extends Component {
 
   populateVideos = () => {
     // get all videos
-    axios.get(`${URL}/videos?api_key=${API_KEY}`).then((res) => {
+    return axios.get(`${URL}/videos?api_key=${API_KEY}`).then((res) => {
       let { id } = this.props.match.params;
       // find first id if there is no id already set
       if (!id) id = res.data[0].id;
-
       // get main video with id
       this.getMainVideo(id);
       // remove main video from side videos and set side videos
@@ -42,7 +41,7 @@ export default class Home extends Component {
   };
 
   getMainVideo = (id) => {
-    axios
+    return axios
       .get(`${URL}/videos/${id}?api_key=${API_KEY}`)
       .then((res) => {
         this.setState({ mainVideo: res.data });

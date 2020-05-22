@@ -7,7 +7,7 @@ const Comment = ({ commentProp, videoId, populateHandler }) => {
   const { id, name, timestamp, comment } = commentProp;
 
   const deleteComment = () => {
-    axios
+    return axios
       .delete(`${URL}/videos/${videoId}/comments/${id}?api_key=${API_KEY}`)
       .then(() => populateHandler());
   };

@@ -20,7 +20,7 @@ export default class NewCommentForm extends Component {
     event.preventDefault();
     event.target.reset();
     const comment = this.state;
-    axios
+    return axios
       .post(
         `${URL}/videos/${this.props.id}/comments?api_key=${API_KEY}`,
         comment
