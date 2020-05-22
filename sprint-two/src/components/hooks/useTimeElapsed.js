@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getTimeElapsed } from "../../scripts/dateUtil";
 
 const useTimeElapsed = (timestamp) => {
-  const [timeElapsed, setTimeElapsed] = useState("");
+  const [timeElapsed, setTimeElapsed] = useState(getTimeElapsed(timestamp));
 
   useEffect(() => {
     let interval = setInterval(() => {
