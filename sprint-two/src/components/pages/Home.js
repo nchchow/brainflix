@@ -4,9 +4,7 @@ import VideoPlayer from "../main-video/VideoPlayer";
 import VideoInfo from "../metadata/VideoInfo";
 import CommentsSection from "../sub-content/CommentsSection";
 import VideoList from "../sub-content/VideoList";
-
-const API_KEY = "14b626c6-5929-4318-9084-33bee95a76bc";
-const URL = "https://project-2-api.herokuapp.com";
+import { API_KEY, URL } from "../../env/env-variables";
 
 export default class Home extends Component {
   state = {

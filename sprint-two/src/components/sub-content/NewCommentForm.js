@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import axios from "axios";
 import Button from "../buttons/Button";
+import { API_KEY, URL } from "../../env/env-variables";
 
 export default class NewCommentForm extends Component {
   state = {
@@ -19,8 +20,6 @@ export default class NewCommentForm extends Component {
     event.preventDefault();
     event.target.reset();
     const comment = this.state;
-    const API_KEY = "14b626c6-5929-4318-9084-33bee95a76bc";
-    const URL = "https://project-2-api.herokuapp.com";
     axios
       .post(
         `${URL}/videos/${this.props.id}/comments?api_key=${API_KEY}`,
