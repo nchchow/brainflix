@@ -5,6 +5,9 @@ import VideoInfo from "../metadata/VideoInfo";
 import CommentsSection from "../sub-content/CommentsSection";
 import VideoList from "../sub-content/VideoList";
 
+const API_KEY = "14b626c6-5929-4318-9084-33bee95a76bc";
+const URL = "https://project-2-api.herokuapp.com";
+
 export default class Home extends Component {
   state = {
     mainVideo: {
@@ -26,8 +29,6 @@ export default class Home extends Component {
   };
 
   populateVideos = () => {
-    const API_KEY = "14b626c6-5929-4318-9084-33bee95a76bc";
-    const URL = "https://project-2-api.herokuapp.com";
     // get all videos
     axios.get(`${URL}/videos?api_key=${API_KEY}`).then((res) => {
       let { id } = this.props.match.params;
@@ -35,13 +36,17 @@ export default class Home extends Component {
       if (!id) id = res.data[0].id;
 
       // get main video with id
-      axios.get(`${URL}/videos/${id}?api_key=${API_KEY}`).then((res) => {
-        this.setState({ mainVideo: res.data });
-      });
+      this.getMainVideo(id);
       // remove main video from side videos and set side videos
       this.setState({
         sideVideos: res.data.filter((video) => video.id !== id),
       });
+    });
+  };
+
+  getMainVideo = (id) => {
+    axios.get(`${URL}/videos/${id}?api_key=${API_KEY}`).then((res) => {
+      this.setState({ mainVideo: res.data });
     });
   };
 
@@ -56,7 +61,7 @@ export default class Home extends Component {
             <VideoInfo mainVideo={mainVideo} />
             <CommentsSection
               mainVideo={mainVideo}
-              populateHandler={this.populateVideos}
+              populateHandler={() => this.getMainVideo(mainVideo.id)}
             />
           </div>
           <VideoList sideVideos={this.state.sideVideos} />
