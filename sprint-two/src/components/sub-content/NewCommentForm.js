@@ -25,7 +25,7 @@ export default class NewCommentForm extends Component {
         `${URL}/videos/${this.props.id}/comments?api_key=${API_KEY}`,
         comment
       )
-      .then(() => this.props.populateHandler());
+      .then(this.props.populateHandler);
   };
 
   render() {

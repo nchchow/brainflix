@@ -9,7 +9,7 @@ const Comment = ({ commentProp, videoId, populateHandler }) => {
   const deleteComment = () => {
     return axios
       .delete(`${URL}/videos/${videoId}/comments/${id}?api_key=${API_KEY}`)
-      .then(() => populateHandler());
+      .then(populateHandler);
   };
 
   return (
