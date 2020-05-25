@@ -5,7 +5,7 @@ import CommentsHeaderTitle from "./CommentsHeaderTitle";
 const CommentsHeader = ({ mainVideo, populateHandler }) => (
   <header className="comments__header">
     <CommentsHeaderTitle commentsCount={mainVideo.comments.length} />
-    <NewComment id={mainVideo.id} populateHandler={populateHandler} />
+    <NewComment videoId={mainVideo.id} populateHandler={populateHandler} />
   </header>
 );
 

@@ -26,30 +26,29 @@ export default class Home extends Component {
       this.populateVideos().then(window.scrollTo(0, 0));
   };
 
-  populateVideos = () => {
+  populateVideos = async () => {
     // get all videos
-    return axios.get(`${URL}/videos?api_key=${API_KEY}`).then((res) => {
-      let { id } = this.props.match.params;
-      // find first id if there is no id already set
-      if (!id) id = res.data[0].id;
-      // get main video with id
-      this.getMainVideo(id);
-      // remove main video from side videos and set side videos
-      this.setState({
-        sideVideos: res.data.filter((video) => video.id !== id),
-      });
+    const { data } = await axios.get(`${URL}/videos?api_key=${API_KEY}`);
+    let { id } = this.props.match.params;
+    // find first id if there is no id already set
+    if (!id) id = data[0].id;
+    // get main video with id
+    this.getMainVideo(id);
+    // remove main video from side videos and set side videos
+    this.setState({
+      sideVideos: data.filter((video) => video.id !== id),
     });
   };
 
-  getMainVideo = (id) => {
-    return axios
-      .get(`${URL}/videos/${id}?api_key=${API_KEY}`)
-      .then((res) => {
-        this.setState({ mainVideo: res.data });
-      })
-      .catch(() => {
-        window.location.href = "/"; // redirects to home if no video is found
-      });
+  getMainVideo = async (id) => {
+    try {
+      const { data } = await axios.get(
+        `${URL}/videos/${id}?api_key=${API_KEY}`
+      );
+      this.setState({ mainVideo: data });
+    } catch (err) {
+      window.location.href = "/"; // redirects to home if no video is found
+    }
   };
 
   render() {

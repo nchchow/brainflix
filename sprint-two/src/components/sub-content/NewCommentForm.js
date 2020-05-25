@@ -16,16 +16,15 @@ export default class NewCommentForm extends Component {
     });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     event.target.reset();
     const comment = this.state;
-    return axios
-      .post(
-        `${URL}/videos/${this.props.id}/comments?api_key=${API_KEY}`,
-        comment
-      )
-      .then(this.props.populateHandler);
+    await axios.post(
+      `${URL}/videos/${this.props.videoId}/comments?api_key=${API_KEY}`,
+      comment
+    );
+    this.props.populateHandler();
   };
 
   render() {
