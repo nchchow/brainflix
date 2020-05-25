@@ -782,6 +782,10 @@ html {
   background: #afafaf;
 }
 
+.comments__list .comment--right {
+  width: 100%;
+}
+
 .comments__list .comment--right--top {
   display: -webkit-box;
   display: -ms-flexbox;
