@@ -1,0 +1,154 @@
+// COMMENTS SECTION
+.comments {
+  margin: 0;
+
+  @include desktop() {
+    width: 712px;
+  }
+
+  &__header {
+    padding-bottom: 24px;
+    &--title {
+      margin: 0 0 32px;
+      font-family: $font-demi;
+      @include subHeaderText();
+    }
+
+    .new-comment {
+      display: flex;
+      justify-content: space-between;
+
+      &__user-icon {
+        margin: 20px 18px 0 0;
+        @extend .user-icon;
+      }
+
+      &--form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        @include tablet() {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      &__content {
+        @extend .text-area;
+        height: 3rem;
+
+        @include tablet() {
+          width: 440px;
+        }
+
+        &--header {
+          margin: 0;
+          font-family: $font-demi;
+          color: $text-label-color;
+          @include labelText();
+        }
+      }
+
+      &__button {
+        @extend .button;
+        margin-top: 16px;
+        align-self: flex-end;
+
+        @include tablet() {
+          margin: 20px 40px 0 16px;
+          width: 160px;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+
+  &__list {
+    .comment {
+      padding: 24px 0;
+      position: relative;
+
+      &:hover {
+        .comment__shift-wrapper {
+          transform: translateX(-60px);
+        }
+
+        .comment__delete-button {
+          animation: expand forwards 0.3s;
+        }
+      }
+
+      &__shift-wrapper {
+        display: flex;
+        transition: transform cubic-bezier(0.5, 0.5, 0, 1) 0.3s;
+      }
+
+      &__delete-button {
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0px;
+        opacity: 0;
+        overflow: hidden;
+        background: $danger-CTA;
+        color: #fff;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          background: $danger-hover;
+        }
+      }
+
+      &__user-icon {
+        margin: 0 16px 0 0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: $text-label-color;
+      }
+
+      &--right {
+        width: 100%;
+        &--top {
+          display: flex;
+          justify-content: space-between;
+          @include tablet() {
+            justify-content: flex-start;
+          }
+        }
+      }
+
+      &__username {
+        font-family: $font-demi;
+        @include subHeaderText();
+        @include tablet() {
+          margin-right: 16px;
+        }
+      }
+
+      &__timestamp {
+        color: $text-label-color;
+        @include subHeaderText();
+      }
+
+      &__content {
+        margin: 0;
+        margin-top: 10px;
+        max-width: 624px;
+        word-break: break-all;
+        @include subHeaderText();
+      }
+
+      &__divider {
+        @extend .divider;
+        // margin: 24px 0;
+      }
+    }
+  }
+}
