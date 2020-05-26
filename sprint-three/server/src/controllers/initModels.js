@@ -8,27 +8,30 @@ const URL = "https://project-2-api.herokuapp.com";
  */
 const videosToJson = async () => {
   const { data } = await axios.get(`${URL}/videos?api_key=${API_KEY}`);
-  fs.writeFile("./src/models/videos.json", JSON.stringify(data), (err) => {
+  fs.writeFile("../models/videos.json", JSON.stringify(data), (err) => {
     if (err) throw err;
     console.log("saved");
   });
 };
 
 const eachVideoToJson = async () => {
-  fs.readFile("./src/models/videos.json", "utf8", (err, data) => {
+  fs.readFile("../models/videos.json", "utf8", (err, data) => {
     if (err) throw err;
-    JSON.parse(data).forEach((video) => {
+    JSON.parse(data).forEach(async (video) => {
       const { data } = await axios.get(
         `${URL}/videos/${video.id}?api_key=${API_KEY}`
       );
       fs.writeFile(
-        `./src/models/videos/${video.id}.json`,
+        `../models/videos/${video.id}.json`,
         JSON.stringify(data),
         (err) => {
           if (err) throw err;
-          console.log("saved");
+          console.log("saved: " + video.id);
         }
       );
     });
   });
 };
+
+videosToJson();
+eachVideoToJson();

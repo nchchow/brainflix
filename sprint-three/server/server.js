@@ -1,24 +1,34 @@
-const fs = require("fs");
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const postComment = require("./src/controllers/postComment");
+
+// middleware
+app.use(express.json());
+app.use(cors());
+
 const PORT = 8080;
+const MODELS_PATH = `${__dirname}/src/models`;
 
 app.get("/videos", (req, res) => {
-  fs.readFile("./src/models/videos.json", "utf8", (err, data) => {
-    if (err) throw err;
-    res.send(data);
+  res.sendFile(`${MODELS_PATH}/videos.json`, (err) => {
+    if (err) res.sendStatus(404);
   });
 });
 
 app.get("/videos/:id", (req, res) => {
-  fs.readFile(
-    `./src/models/videos/${req.params.id}.json`,
-    "utf8",
-    (err, data) => {
-      if (err) throw err;
-      res.send(data);
-    }
-  );
+  res.sendFile(`${MODELS_PATH}/videos/${req.params.id}.json`, (err) => {
+    if (err) res.sendStatus(404);
+  });
+});
+
+app.post("/videos/:id/comments", (req, res) => {
+  postComment(req.params.id, req.body);
+  res.sendStatus(200);
+});
+
+app.get("/*", (req, res) => {
+  res.sendStatus(404);
 });
 
 app.listen(PORT, () => {
