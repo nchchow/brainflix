@@ -23,8 +23,8 @@ app.get("/videos/:id", (req, res) => {
 });
 
 app.post("/videos/:id/comments", (req, res) => {
-  postComment(req.params.id, req.body);
-  res.sendStatus(200);
+  const status = postComment(req.params.id, req.body);
+  res.sendStatus(status);
 });
 
 app.get("/*", (req, res) => {
