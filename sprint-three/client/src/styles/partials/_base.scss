@@ -86,6 +86,7 @@ main {
 
 .link {
   text-decoration: none;
+  color: $text-color;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:visited {

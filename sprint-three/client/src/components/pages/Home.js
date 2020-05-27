@@ -35,6 +35,7 @@ export default class Home extends Component {
       if (!id) id = data[0].id;
       // get main video with id
       this.getMainVideo(id);
+
       // remove main video from side videos and set side videos
       this.setState({
         sideVideos: data.filter((video) => video.id !== id),
