@@ -13,8 +13,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  postVideo(req.body);
-  res.send("posted");
+  res.send(postVideo(req.body));
 });
 
 module.exports = router;

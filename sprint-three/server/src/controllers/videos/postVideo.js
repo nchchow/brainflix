@@ -3,8 +3,6 @@ const { customAlphabet } = require("nanoid");
 const nanoid = customAlphabet("1234567890abcdefghijklmnopqrstuvwxyz", 12);
 
 const postVideo = (video) => {
-  let status = 200;
-
   // set video defaults
   video.id = nanoid();
   video.views = 0;
@@ -12,12 +10,16 @@ const postVideo = (video) => {
   video.timestamp = Date.now();
   video.comments = [];
 
-  // write a new file with all data
-  status = createJson(video);
-  // write to videos file with selected data
-  status = addToJson(video);
+  try {
+    // write a new file with all data
+    createJson(video);
+    // write to videos file with selected data
+    addToJson(video);
+  } catch (err) {
+    console.log(err);
+  }
 
-  return status;
+  return video;
 };
 
 const createJson = (video) => {
@@ -25,22 +27,24 @@ const createJson = (video) => {
     `./src/models/videos/${video.id}.json`,
     JSON.stringify(video),
     (err) => {
-      return err ? 404 : 200;
+      if (err) throw err;
     }
   );
 };
 
 const addToJson = ({ id, title, channel, image }) => {
-  const data = fs.readFileSync("./src/models/videos.json");
-  const videos = JSON.parse(data);
-  videos.push({
-    id: id,
-    title: title,
-    channel: channel,
-    image: image,
-  });
-  fs.writeFile("./src/models/videos.json", JSON.stringify(videos), (err) => {
-    return err ? 404 : 200;
+  fs.readFile("./src/models/videos.json", (err, data) => {
+    if (err) throw err;
+    const videos = JSON.parse(data);
+    videos.push({
+      id: id,
+      title: title,
+      channel: channel,
+      image: image,
+    });
+    fs.writeFile("./src/models/videos.json", JSON.stringify(videos), (err) => {
+      if (err) throw err;
+    });
   });
 };
 
