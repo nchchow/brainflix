@@ -1,19 +1,16 @@
 const fs = require("fs");
 
-const getVideos = () => {
+const getVideos = (id) => {
   return (
-    fs.readFileSync(`./src/models/videos.json`, "utf8") || {
-      message: "Videos not found",
+    fs.readFileSync(path(id), "utf8") || {
+      message: "Not found",
     }
   );
 };
 
-const getVideo = (id) => {
-  return (
-    fs.readFileSync(`./src/models/videos/${id}.json`, "utf8") || {
-      message: "No video with that id exists",
-    }
-  );
+const path = (id) => {
+  let param = id ? `/${id}` : "";
+  return `./src/models/videos${param}.json`;
 };
 
-module.exports = { getVideos, getVideo };
+module.exports = { getVideos };
