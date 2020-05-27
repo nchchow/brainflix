@@ -27,17 +27,21 @@ export default class Home extends Component {
   };
 
   populateVideos = async () => {
-    // get all videos
-    const { data } = await axios.get(`${URL}/videos?api_key=${API_KEY}`);
-    let { id } = this.props.match.params;
-    // find first id if there is no id already set
-    if (!id) id = data[0].id;
-    // get main video with id
-    this.getMainVideo(id);
-    // remove main video from side videos and set side videos
-    this.setState({
-      sideVideos: data.filter((video) => video.id !== id),
-    });
+    try {
+      // get all videos
+      const { data } = await axios.get(`${URL}/videos?api_key=${API_KEY}`);
+      let { id } = this.props.match.params;
+      // find first id if there is no id already set
+      if (!id) id = data[0].id;
+      // get main video with id
+      this.getMainVideo(id);
+      // remove main video from side videos and set side videos
+      this.setState({
+        sideVideos: data.filter((video) => video.id !== id),
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   getMainVideo = async (id) => {
