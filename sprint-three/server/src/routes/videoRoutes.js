@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-const postVideo = require("../controllers/postVideo");
+const { getVideos, getVideo } = require("../controllers/videos/getVideo");
+const postVideo = require("../controllers/videos/postVideo");
 
 router.get("/", (req, res) => {
-  const videos = require(`../models/videos.json`);
-  res.json(videos);
+  res.send(getVideos());
 });
 
 router.get("/:id", (req, res) => {
-  const video = require(`../models/videos/${req.params.id}.json`);
-  res.json(video);
+  res.send(getVideo(req.params.id));
 });
 
 router.post("/", (req, res) => {

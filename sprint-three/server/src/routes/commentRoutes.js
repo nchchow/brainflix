@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const postComment = require("../controllers/postComment");
-const deleteComment = require("../controllers/deleteComment");
+const postComment = require("../controllers/comments/postComment");
+const deleteComment = require("../controllers/comments/deleteComment");
 
 router.post("/:videoId/comments", (req, res) => {
   const status = postComment(req.params.videoId, req.body);
