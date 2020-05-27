@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+require("dotenv").config();
+const { PORT, BACKEND_URL } = process.env;
+
 // routes
 const videoRoutes = require("./src/routes/videoRoutes");
 const commentRoutes = require("./src/routes/commentRoutes");
@@ -9,8 +12,6 @@ const commentRoutes = require("./src/routes/commentRoutes");
 // middleware
 app.use(express.json());
 app.use(cors());
-
-const PORT = 8080;
 
 app.use("/videos", videoRoutes);
 
@@ -21,5 +22,5 @@ app.get("/*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is listening on: ${PORT}`);
+  console.log(`Server is listening on: ${BACKEND_URL}${PORT}`);
 });

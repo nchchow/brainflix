@@ -8,14 +8,18 @@ const postComment = (videoId, comment) => {
   // make a copy in memory
   const video = JSON.parse(data);
   // create default data for comment
-  comment.id = uuid();
-  comment.likes = 0;
-  comment.timestamp = Date.now();
+  setDefaults(comment);
   // push comment
   video.comments.push(comment);
   // writefile
   fs.writeFileSync(path, JSON.stringify(video));
   return comment || "not found";
+};
+
+const setDefaults = (comment) => {
+  comment.id = uuid();
+  comment.likes = 0;
+  comment.timestamp = Date.now();
 };
 
 module.exports = postComment;

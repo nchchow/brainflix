@@ -6,13 +6,12 @@ const deleteComment = (videoId, commentId) => {
   const path = `./src/models/videos/${videoId}.json`;
   // readfile
   const data = fs.readFileSync(path, "utf8");
-  // get video data
   const video = JSON.parse(data);
   // find index of matching comment id and remove
   const indexToDel = video.comments.findIndex(
     (comment) => comment.id === commentId
   );
-  deleted = comments[indexToDel];
+  deleted = video.comments[indexToDel];
   indexToDel && video.comments.splice(indexToDel, 1);
   fs.writeFileSync(path, JSON.stringify(video));
   return deleted || "not found";
