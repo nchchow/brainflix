@@ -10,10 +10,10 @@ const postVideo = (video) => {
     createJson(video);
     // write to videos file with selected data
     addToJson(video);
+    return video;
   } catch (err) {
-    console.log(err);
+    return { message: "Cannot post" };
   }
-  return video;
 };
 
 const setDefaults = (video) => {
