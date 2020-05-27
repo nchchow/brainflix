@@ -1,21 +1,18 @@
 const fs = require("fs");
-const { uuid } = require("uuidv4");
 
-const postComment = (videoId, comment) => {
+const deleteComment = (videoId, commentId) => {
   let status = 200;
   const path = `./src/models/videos/${videoId}.json`;
   // readfile
   fs.readFile(path, "utf8", (err, data) => {
     if (err) status = 404;
-    // make a copy in memory
+    // get video data
     const video = JSON.parse(data);
-    // create default data for comment
-    comment.id = uuid();
-    comment.likes = 0;
-    comment.timestamp = Date.now();
-    // push comment
-    video.comments.push(comment);
-    // writefile
+    // find index of matching comment id and remove
+    const indexToDel = video.comments.findIndex(
+      (comment) => comment.id === commentId
+    );
+    indexToDel && video.comments.splice(indexToDel, 1);
     fs.writeFile(path, JSON.stringify(video), (err) => {
       if (err) status = 404;
     });
@@ -23,4 +20,4 @@ const postComment = (videoId, comment) => {
   return status;
 };
 
-module.exports = postComment;
+module.exports = deleteComment;

@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
 const postComment = require("./src/controllers/postComment");
+const deleteComment = require("./src/controllers/deleteComment");
 
 // middleware
 app.use(express.json());
@@ -24,6 +26,11 @@ app.get("/videos/:id", (req, res) => {
 
 app.post("/videos/:id/comments", (req, res) => {
   const status = postComment(req.params.id, req.body);
+  res.sendStatus(status);
+});
+
+app.delete("/videos/:videoId/comments/:commentId", (req, res) => {
+  const status = deleteComment(req.params.videoId, req.params.commentId);
   res.sendStatus(status);
 });
 
