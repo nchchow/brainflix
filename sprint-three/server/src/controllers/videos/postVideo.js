@@ -25,8 +25,7 @@ const createJson = (video) => {
     `./src/models/videos/${video.id}.json`,
     JSON.stringify(video),
     (err) => {
-      if (err) return 404;
-      return 200;
+      return err ? 404 : 200;
     }
   );
 };
@@ -41,8 +40,7 @@ const addToJson = ({ id, title, channel, image }) => {
     image: image,
   });
   fs.writeFile("./src/models/videos.json", JSON.stringify(videos), (err) => {
-    if (err) return 404;
-    return 200;
+    return err ? 404 : 200;
   });
 };
 
