@@ -29,7 +29,6 @@
 
   .site-nav {
     display: grid;
-    grid-template-columns: auto 64px;
     grid-template-rows: 48px auto;
     @include tablet() {
       margin-left: 149px;

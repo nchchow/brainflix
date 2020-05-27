@@ -247,8 +247,6 @@ html {
 .site-header .site-nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 64px;
-      grid-template-columns: auto 64px;
   -ms-grid-rows: 48px auto;
       grid-template-rows: 48px auto;
 }
