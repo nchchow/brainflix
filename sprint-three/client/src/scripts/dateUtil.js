@@ -1,20 +1,4 @@
 const dateUtil = {
-  /*
-		DATE FUNCTIONS
-	*/
-  // takes a timeStamp and returns date string in mm/dd/yyyy
-  getShortDate(timeStamp) {
-    // pad 0 for single digits
-    const padZero = (val) => {
-      return val < 9 ? "0" + val : val;
-    };
-    const date = new Date(timeStamp);
-    const m = padZero(date.getMonth() + 1);
-    const d = padZero(date.getDate());
-    const y = date.getFullYear();
-    return `${m}/${d}/${y}`;
-  },
-
   // returns time elapsed in the largest appropriate unit as string
   getTimeElapsed(timestamp) {
     // take date difference and unit, then format to string
@@ -45,8 +29,7 @@ const dateUtil = {
   },
 };
 
-const getShortDate = dateUtil.getShortDate;
 const getTimeElapsed = dateUtil.getTimeElapsed;
 
-export { getShortDate, getTimeElapsed };
+export { getTimeElapsed };
 export default dateUtil;

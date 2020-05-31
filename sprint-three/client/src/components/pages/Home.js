@@ -58,13 +58,15 @@ export default class Home extends Component {
 
   render() {
     const { mainVideo } = this.state;
-    const { image, duration } = mainVideo;
     return (
       <>
-        <VideoPlayer image={image} duration={duration} />
+        <VideoPlayer mainVideo={mainVideo} />
         <main className="container">
           <div className="main--left">
-            <VideoInfo mainVideo={mainVideo} />
+            <VideoInfo
+              mainVideo={mainVideo}
+              populateHandler={() => this.getMainVideo(mainVideo.id)}
+            />
             <CommentsSection
               mainVideo={mainVideo}
               populateHandler={() => this.getMainVideo(mainVideo.id)}

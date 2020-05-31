@@ -13,4 +13,4 @@ const path = (id) => {
   return `./src/models/videos${param}.json`;
 };
 
-module.exports = { getVideos };
+module.exports = getVideos;

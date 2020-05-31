@@ -385,7 +385,7 @@ html {
   }
 }
 
-.controller, .video-player__controls--playPause, .video-player__controls--scrubber, .video-player__controls--tools-wrapper, .video-player__controls--tools-wrapper > button {
+.controller, .video-player__controls--playPause, .video-player__controls--progress, .video-player__controls--tools-wrapper, .video-player__controls--tools-wrapper > button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -435,38 +435,39 @@ html {
   outline: none;
 }
 
-.video-player__controls--scrubber {
+.video-player__controls--progress {
   margin: 0 8px;
 }
 
 @media screen and (min-width: 700px) {
-  .video-player__controls--scrubber {
+  .video-player__controls--progress {
     margin: 0 16px;
   }
 }
 
-.video-player__controls--scrubber__loader {
+.video-player__controls--progress__loader {
   margin: 0 20px;
   width: 100%;
   height: 4px;
   background: #afafaf;
+  color: #0095ff;
   border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {
-  .video-player__controls--scrubber__loader {
+  .video-player__controls--progress__loader {
     width: 80%;
     margin-right: 0;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .video-player__controls--scrubber__loader {
+  .video-player__controls--progress__loader {
     width: 87%;
   }
 }
 
-.video-player__controls--scrubber__duration {
+.video-player__controls--progress__duration {
   margin: 0 auto;
   display: none;
   color: #afafaf;
@@ -474,7 +475,7 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  .video-player__controls--scrubber__duration {
+  .video-player__controls--progress__duration {
     display: inline-block;
   }
 }
