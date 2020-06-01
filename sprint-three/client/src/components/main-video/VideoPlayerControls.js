@@ -6,7 +6,12 @@ import fullscreenIcon from "../../assets/icons/SVG/Icon-fullscreen.svg";
 import volumeIcon from "../../assets/icons/SVG/Icon-volume.svg";
 import Progress from "./Progress";
 
-const VideoPlayerControls = ({ isPlaying, duration, controls }) => (
+const VideoPlayerControls = ({
+  isPlaying,
+  currentTimeInSec,
+  duration,
+  controls,
+}) => (
   <div className="video-player__controls container">
     <IconButton
       className="video-player__controls--playPause"
@@ -14,7 +19,7 @@ const VideoPlayerControls = ({ isPlaying, duration, controls }) => (
       iconClassName="video-player__controls--playPause--icon"
       onClick={controls.playPause}
     />
-    <Progress duration={duration} />
+    <Progress currentTimeInSec={currentTimeInSec} duration={duration} />
     <div className="video-player__controls--tools-wrapper">
       <IconButton
         className="video-player__controls--fullscreen"

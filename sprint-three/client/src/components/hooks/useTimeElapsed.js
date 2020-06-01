@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getTimeElapsed } from "../../scripts/dateUtil";
+import { getTimeElapsed } from "../../scripts/timeUtil";
 
 const useTimeElapsed = (timestamp) => {
   const [timeElapsed, setTimeElapsed] = useState(getTimeElapsed(timestamp));

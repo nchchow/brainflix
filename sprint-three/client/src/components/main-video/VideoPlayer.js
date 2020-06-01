@@ -1,12 +1,15 @@
 import React, { Component, createRef } from "react";
 import VideoPlayerControls from "./VideoPlayerControls";
-import { API_KEY } from "../../env/env-variables";
+import video from "../../assets/video/BrainStation Sample Video.mp4";
 
 export default class VideoPlayer extends Component {
   vidRef = createRef();
   state = {
+    id: this.props.mainVideo.id,
     isPlaying: false,
     volume: 1,
+    currentTimeInSec: 0,
+    duration: this.props.duration,
   };
 
   playPause = () => {
@@ -41,8 +44,20 @@ export default class VideoPlayer extends Component {
     this.vidRef.current.volume = 1;
   };
 
+  timeUpdateHandler = () => {
+    this.setState({ currentTimeInSec: this.vidRef.current.currentTime });
+  };
+
+  loadedHandler = () => {
+    this.setState({ duration: this.vidRef.current.duration });
+  };
+
+  endedHandler = () => {
+    this.setState({ isPlaying: false });
+    this.vidRef.current.load();
+  };
+
   render() {
-    const { image, video, duration } = this.props.mainVideo;
     const controls = {
       playPause: this.playPause,
       fullscreen: this.fullscreen,
@@ -51,15 +66,19 @@ export default class VideoPlayer extends Component {
     return (
       <div className="video-player-wrapper">
         <video
-          poster={image}
-          src={`${video}?api_key=${API_KEY}`}
+          poster={this.props.mainVideo.image}
+          src={video}
           ref={this.vidRef}
           className="video-player"
           type="video/mp4"
+          onTimeUpdate={this.timeUpdateHandler}
+          onLoadedMetadata={this.loadedHandler}
+          onEnded={this.endedHandler}
         ></video>
         <VideoPlayerControls
           isPlaying={this.state.isPlaying}
-          duration={duration}
+          currentTimeInSec={this.state.currentTimeInSec}
+          duration={this.state.duration}
           controls={controls}
         />
       </div>
