@@ -5,7 +5,6 @@ import video from "../../assets/video/BrainStation Sample Video.mp4";
 export default class VideoPlayer extends Component {
   vidRef = createRef();
   state = {
-    id: this.props.mainVideo.id,
     isPlaying: false,
     volume: 1,
     currentTimeInSec: 0,
@@ -49,7 +48,11 @@ export default class VideoPlayer extends Component {
   };
 
   loadedHandler = () => {
-    this.setState({ duration: this.vidRef.current.duration });
+    this.setState({
+      isPlaying: false,
+      currentTimeInSec: 0,
+      duration: this.vidRef.current.duration,
+    });
   };
 
   endedHandler = () => {
@@ -66,6 +69,7 @@ export default class VideoPlayer extends Component {
     return (
       <div className="video-player-wrapper">
         <video
+          key={this.props.mainVideo.id}
           poster={this.props.mainVideo.image}
           src={video}
           ref={this.vidRef}

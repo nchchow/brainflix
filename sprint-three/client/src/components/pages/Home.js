@@ -9,6 +9,7 @@ import { API_KEY, URL } from "../../env/env-variables";
 export default class Home extends Component {
   state = {
     mainVideo: {
+      id: "",
       image: "",
       duration: "",
       video: "",
