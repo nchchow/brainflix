@@ -108,18 +108,6 @@
       &::-webkit-progress-value {
         position: relative;
         background: $primary-CTA;
-
-        &::before {
-          content: "";
-          position: absolute;
-          display: inline-block;
-          right: 0;
-          bottom: 0;
-          width: 10px;
-          height: 10px;
-          background: #000;
-          // background-image: url("../assets/icons/SVG/Icon-scrubber-control.svg");
-        }
       }
 
       &::-moz-progress-bar {

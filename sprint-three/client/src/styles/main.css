@@ -480,17 +480,6 @@ html {
   background: #0095ff;
 }
 
-.video-player__controls--progress__loader::-webkit-progress-value::before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  right: 0;
-  bottom: 0;
-  width: 10px;
-  height: 10px;
-  background: #000;
-}
-
 .video-player__controls--progress__loader::-moz-progress-bar {
   background: #0095ff;
 }
