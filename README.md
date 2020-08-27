@@ -4,7 +4,7 @@ Fullstack video streaming web application
 
 ## Screenshots
 
-[TitlePage.pdf](https://github.com/nchchow/brainflix/files/5138175/TitlePage.pdf)
+<img width="1280" alt="title-slide" src="https://github.com/nchchow/brainflix/files/5138175/TitlePage.pdf">
 
 ## Built With
 
